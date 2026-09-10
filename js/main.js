@@ -5,12 +5,62 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+  initBackgroundSwitcher();
   initThemeToggle();
   initMobileMenu();
   initProgramTabs();
   initFaqAccordion();
   initInquiryForm();
 });
+
+/* --------------------------------------------------------------------------
+   0. FIVE-WAY BACKGROUND WALLPAPER SWITCHER
+   Supports: 'splashes', 'bamboo', 'clouds', 'blocks', 'minimal'
+   -------------------------------------------------------------------------- */
+function initBackgroundSwitcher() {
+  const bgBtns = document.querySelectorAll('.bg-opt-btn');
+  const mobileBgBtn = document.getElementById('mobileBgToggleBtn');
+  const bgOptions = ['splashes', 'bamboo', 'clouds', 'blocks', 'minimal'];
+  const savedBg = localStorage.getItem('lpims-active-bg') || 'splashes';
+
+  applyBackground(savedBg);
+
+  bgBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const targetBg = btn.getAttribute('data-bg-set');
+      applyBackground(targetBg);
+      localStorage.setItem('lpims-active-bg', targetBg);
+    });
+  });
+
+  if (mobileBgBtn) {
+    mobileBgBtn.addEventListener('click', () => {
+      const currentBg = document.documentElement.getAttribute('data-bg') || 'splashes';
+      const currentIndex = bgOptions.indexOf(currentBg);
+      const nextIndex = (currentIndex + 1) % bgOptions.length;
+      const nextBg = bgOptions[nextIndex];
+      applyBackground(nextBg);
+      localStorage.setItem('lpims-active-bg', nextBg);
+    });
+  }
+
+  function applyBackground(bgName) {
+    document.documentElement.setAttribute('data-bg', bgName);
+    bgBtns.forEach(btn => {
+      if (btn.getAttribute('data-bg-set') === bgName) {
+        btn.classList.add('active');
+      } else {
+        btn.classList.remove('active');
+      }
+    });
+
+    if (mobileBgBtn) {
+      const icons = { splashes: '🎨', bamboo: '🎋', clouds: '☁️', blocks: '🧩', minimal: '🐾' };
+      mobileBgBtn.innerHTML = `<span>${icons[bgName] || '🖼️'}</span>`;
+      mobileBgBtn.title = `Current BG: ${bgName} (Tap to cycle)`;
+    }
+  }
+}
 
 /* --------------------------------------------------------------------------
    1. TWO-WAY THEME SWITCHER: Pastel Playground vs. Frosted Glassmorphism

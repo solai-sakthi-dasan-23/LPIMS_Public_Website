@@ -30,17 +30,17 @@ body {
   transition: background-color 0.4s ease, color 0.4s ease;
 }
 
-/* Background Wallpaper: Paint Marks & Playful Pandas */
+/* Background Wallpaper: Dynamically switchable across 5 patterns */
 .bg-wallpaper {
   position: fixed;
   inset: 0;
-  background-image: url('../assets/images/panda-bg-pattern.jpg');
+  background-image: var(--bg-pattern-image, url('../assets/images/panda-bg-pattern.jpg'));
   background-repeat: repeat;
-  background-size: 520px auto;
-  opacity: var(--bg-pattern-opacity);
+  background-size: var(--bg-pattern-size, 520px auto);
+  opacity: var(--bg-pattern-opacity, 0.28);
   z-index: -2;
   pointer-events: none;
-  transition: opacity 0.4s ease;
+  transition: opacity 0.4s ease, background-image 0.4s ease;
 }
 
 /* Ambient Glowing Paint Orbs (Calm purple, mint, and honey yellow) */
@@ -329,7 +329,7 @@ button {
 /* --- Floating 2-Way Theme Switcher Pill (Pastel vs. Glass) --- */
 .floating-theme-switch {
   position: fixed;
-  bottom: 1.5rem;
+  bottom: 1.25rem;
   left: 50%;
   transform: translateX(-50%);
   z-index: 999;
@@ -344,6 +344,66 @@ button {
   align-items: center;
   gap: 0.4rem;
   transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Floating 5-Background Selector Dock */
+.floating-bg-dock {
+  position: fixed;
+  bottom: 4.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 998;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1.5px solid rgba(255, 255, 255, 0.95);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border-radius: 999px;
+  padding: 0.3rem 0.55rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  transition: transform 0.25s ease;
+}
+
+.floating-bg-dock:hover {
+  transform: translateX(-50%) translateY(-2px);
+}
+
+.bg-dock-title {
+  font-family: 'Fredoka', cursive, sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-title);
+  padding: 0 0.45rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.bg-opt-btn {
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text-body);
+  background: transparent;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+}
+
+.bg-opt-btn:hover {
+  background: var(--primary-light);
+  color: var(--primary);
+}
+
+.bg-opt-btn.active {
+  background: var(--primary);
+  color: #FFF;
+  box-shadow: 0 3px 10px rgba(var(--primary-rgb), 0.3);
 }
 
 .floating-theme-switch:hover {

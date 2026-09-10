@@ -75,16 +75,38 @@
     <a href="#admissions" class="btn btn-primary" style="width:100%;">Book a Visit Now</a>
   </aside>
 
+  <!-- ================= 5-BACKGROUND WALLPAPER SELECTOR DOCK ================= -->
+  <div class="floating-bg-dock" id="bgDock">
+    <span class="bg-dock-title">
+      <span>🖼️ Background:</span>
+    </span>
+    <button class="bg-opt-btn active" data-bg-set="splashes" title="Pastel Paint Splashes & Playful Pandas">
+      <span>🎨 Splashes</span>
+    </button>
+    <button class="bg-opt-btn" data-bg-set="bamboo" title="Japanese Bamboo Zen Grove & Pandas">
+      <span>🎋 Bamboo</span>
+    </button>
+    <button class="bg-opt-btn" data-bg-set="clouds" title="Dreamy Lavender Clouds & Crescent Moons">
+      <span>☁️ Dreamy</span>
+    </button>
+    <button class="bg-opt-btn" data-bg-set="blocks" title="Montessori Wooden Blocks & Pandas">
+      <span>🧩 Blocks</span>
+    </button>
+    <button class="bg-opt-btn" data-bg-set="minimal" title="Super Light Minimal Panda Paws & Leaves">
+      <span>🐾 Minimal</span>
+    </button>
+  </div>
+
   <!-- ================= FLOATING 2-WAY THEME SWITCHER (PASTEL vs GLASS) ================= -->
   <div class="floating-theme-switch" id="themeSwitchPill">
     <span class="theme-switch-title">
-      <span>🎨 Switch Style:</span>
+      <span>🎨 Style:</span>
     </span>
     <button class="switch-btn active" data-theme-set="pastel" title="Playful Pastel Bento with Calm Lavender/Purple">
-      <span>🌸 Pastel Playground</span>
+      <span>🌸 Pastel</span>
     </button>
     <button class="switch-btn" data-theme-set="glass" title="Modern Frosted Glassmorphism with Glowing Soft Orbs">
-      <span>✨ Frosted Glass</span>
+      <span>✨ Glass</span>
     </button>
   </div>
 
@@ -832,8 +854,11 @@
       <span>📞 Call</span>
     </a>
     <a href="#admissions" class="mobile-action-visit" title="Book a Campus Visit">
-      <span>✨ Book Tour / WhatsApp</span>
+      <span>✨ Visit / WhatsApp</span>
     </a>
+    <button class="mobile-theme-toggle-btn" id="mobileBgToggleBtn" title="Cycle Background Wallpaper" aria-label="Cycle Background">
+      <span>🖼️</span>
+    </button>
     <button class="mobile-theme-toggle-btn" id="mobileThemeToggleBtn" title="Toggle Glass / Pastel Style" aria-label="Toggle visual style">
       <span>🎨</span>
     </button>

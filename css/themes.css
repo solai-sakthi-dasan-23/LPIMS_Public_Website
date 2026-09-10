@@ -1,11 +1,45 @@
 /* ==========================================================================
-   THEMES: PASTEL DREAMS vs. FROSTED GLASSMORPHISM
+   THEMES & BACKGROUND SELECTOR DEFINITIONS
    Little Panda International Montessori School (LPIMS) - Trichy
-   With Calm Pastel Purple/Lavender Primary (No stressful red)
+   5 Switchable Background Wallpaper Modes + 2 Aesthetic Card Modes
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   THEME 1: PASTEL PLAYGROUND (Default)
+   1. FIVE BACKGROUND PATTERNS (Can be switched dynamically)
+   -------------------------------------------------------------------------- */
+:root,
+[data-bg="splashes"] {
+  --bg-pattern-image: url('../assets/images/panda-bg-pattern.jpg');
+  --bg-pattern-size: 520px auto;
+  --bg-pattern-opacity: 0.26;
+}
+
+[data-bg="bamboo"] {
+  --bg-pattern-image: url('../assets/images/bg-bamboo.jpg');
+  --bg-pattern-size: 560px auto;
+  --bg-pattern-opacity: 0.28;
+}
+
+[data-bg="clouds"] {
+  --bg-pattern-image: url('../assets/images/bg-clouds.jpg');
+  --bg-pattern-size: 540px auto;
+  --bg-pattern-opacity: 0.32;
+}
+
+[data-bg="blocks"] {
+  --bg-pattern-image: url('../assets/images/bg-blocks.jpg');
+  --bg-pattern-size: 520px auto;
+  --bg-pattern-opacity: 0.24;
+}
+
+[data-bg="minimal"] {
+  --bg-pattern-image: url('../assets/images/bg-minimal.jpg');
+  --bg-pattern-size: 440px auto;
+  --bg-pattern-opacity: 0.45;
+}
+
+/* --------------------------------------------------------------------------
+   2. THEME 1: PASTEL PLAYGROUND (Default Card Style)
    Soft, peaceful, and settled pastel lavender/purple palette with mint,
    warm buttercup yellow, and creamy white bento card styling.
    -------------------------------------------------------------------------- */
@@ -13,7 +47,6 @@
 [data-theme="pastel"] {
   --theme-id: "pastel";
   --bg-page: #FFFFFF;
-  --bg-pattern-opacity: 0.25;
 
   /* Card and Panel Colors: Crisp solid cards */
   --card-bg: #FFFFFF;
@@ -27,19 +60,19 @@
   --glass-backdrop-filter: blur(12px);
 
   /* Calming, Peaceful Pastel Lavender/Purple */
-  --primary: #8A5CDB;          /* Calm Royal Pastel Purple */
+  --primary: #8A5CDB;
   --primary-rgb: 138, 92, 219;
   --primary-hover: #7847CE;
   --primary-light: #F3EEFF;
 
-  --secondary: #2EC4B6;        /* Fresh Calm Mint */
+  --secondary: #2EC4B6;
   --secondary-rgb: 46, 196, 182;
   --secondary-light: #E6FAF8;
 
-  --accent-yellow: #FFB703;    /* Warm Honey Gold */
+  --accent-yellow: #FFB703;
   --accent-yellow-light: #FFF8E7;
 
-  --accent-blue: #5390D9;      /* Gentle Soft Blue */
+  --accent-blue: #5390D9;
   --accent-blue-light: #EEF5FC;
 
   --text-title: #2B2438;
@@ -57,14 +90,13 @@
 }
 
 /* --------------------------------------------------------------------------
-   THEME 2: TRUE FROSTED GLASSMORPHISM
+   3. THEME 2: TRUE FROSTED GLASSMORPHISM
    Cards are authentically TRANSLUCENT frosted glass with backdrop blur,
    frosted borders, semi-transparent inner elements, and vibrant glowing orbs.
    -------------------------------------------------------------------------- */
 [data-theme="glass"] {
   --theme-id: "glass";
   --bg-page: #F4F6FC;
-  --bg-pattern-opacity: 0.32;
 
   /* TRUE TRANSLUCENT GLASSMORPHISM: Glass cards with see-through frosted backdrop */
   --card-bg: rgba(255, 255, 255, 0.42);
@@ -101,7 +133,7 @@
   --badge-bg: rgba(124, 77, 255, 0.14);
   --badge-color: #651FFF;
 
-  /* Ambient Glass Orbs: Vibrant and saturated so they shine through the translucent glass cards */
+  /* Ambient Glass Orbs */
   --floating-orb-1: rgba(124, 77, 255, 0.55);
   --floating-orb-2: rgba(0, 180, 216, 0.45);
   --floating-orb-3: rgba(255, 183, 3, 0.45);
