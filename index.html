@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="pastel">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Little Panda International Montessori School (LPIMS) | Trichy's 1st Japanese-Style Preschool</title>
+  <meta name="description" content="Little Panda International Montessori School (LPIMS) in Trichy. We nurture good manners, polite Japanese bowing, tidy habits, Tamil & Western early learning, and safe daycare. Admissions Open 2026!">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/themes.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Background Wallpaper: White with Pastel Paint Marks & Baby Pandas -->
+  <div class="bg-wallpaper" aria-hidden="true"></div>
+
+  <!-- Ambient Glowing Paint Orbs (Calm pastel purple, mint, and sunshine honey) -->
+  <div class="ambient-orb ambient-orb-1" aria-hidden="true"></div>
+  <div class="ambient-orb ambient-orb-2" aria-hidden="true"></div>
+  <div class="ambient-orb ambient-orb-3" aria-hidden="true"></div>
+
+  <!-- ================= TOP FRIENDLY NOTICE BAR ================= -->
+  <aside class="top-notice-bar">
+    <div class="container top-bar-inner">
+      <div style="display:flex; align-items:center; gap:0.5rem;">
+        <span>🎋</span>
+        <span><strong>Trichy's 1st Japanese-Style Preschool (Opened 2026)</strong> • Admissions Open for Little Kids!</span>
+      </div>
+      <div class="top-contacts">
+        <a href="tel:+919524657960">
+          <span>📞 +91 95246 57960</span>
+        </a>
+        <a href="tel:+917200307127">
+          <span>+91 72003 07127</span>
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ================= NEAT & CLEAN NAVBAR WITH OFFICIAL LOGO ================= -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="#" class="brand-logo-clean" title="Little Panda International Montessori School">
+        <img src="assets/images/lpims-logo.png" alt="Little Panda International Montessori School" class="brand-official-logo">
+      </a>
+
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#japanese-ethos">Japanese Style</a></li>
+          <li><a href="#programs">Kids Programs</a></li>
+          <li><a href="#amenities">Campus Fun</a></li>
+          <li><a href="#benefits">Why Us?</a></li>
+          <li><a href="#gallery">Photo Corner</a></li>
+          <li><a href="#admissions">Admissions</a></li>
+          <li><a href="#faq">Parents FAQ</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-action-area">
+        <a href="#admissions" class="btn btn-primary" style="padding: 0.55rem 1.35rem; font-size: 0.95rem;">Visit Campus</a>
+        <button class="mobile-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-backdrop" id="mobileBackdrop"></div>
+  <aside class="mobile-nav-drawer" id="mobileDrawer">
+    <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom: 2rem;">
+      <img src="assets/images/lpims-logo.png" alt="Little Panda Logo" style="height:42px; width:auto;">
+      <button id="closeDrawerBtn" style="font-size:1.8rem; background:none; border:none; cursor:pointer;">&times;</button>
+    </div>
+    <ul style="list-style:none; display:flex; flex-direction:column; gap:1.25rem; margin-bottom:2rem;">
+      <li><a href="#about" class="mobile-drawer-link" style="font-family:'Fredoka', cursive; font-size:1.2rem;">About Us</a></li>
+      <li><a href="#japanese-ethos" class="mobile-drawer-link" style="font-family:'Fredoka', cursive; font-size:1.2rem;">Japanese Style & Traditions</a></li>
+      <li><a href="#programs" class="mobile-drawer-link" style="font-family:'Fredoka', cursive; font-size:1.2rem;">Kids Programs</a></li>
+      <li><a href="#amenities" class="mobile-drawer-link" style="font-family:'Fredoka', cursive; font-size:1.2rem;">Campus Fun & Safety</a></li>
+      <li><a href="#benefits" class="mobile-drawer-link" style="font-family:'Fredoka', cursive; font-size:1.2rem;">Why Parents Love Us</a></li>
+      <li><a href="#gallery" class="mobile-drawer-link" style="font-family:'Fredoka', cursive; font-size:1.2rem;">Photo Corner</a></li>
+      <li><a href="#admissions" class="mobile-drawer-link" style="font-family:'Fredoka', cursive; font-size:1.2rem;">Admissions 2026</a></li>
+      <li><a href="#faq" class="mobile-drawer-link" style="font-family:'Fredoka', cursive; font-size:1.2rem;">Parent FAQs</a></li>
+    </ul>
+    <a href="#admissions" class="btn btn-primary" style="width:100%;">Book a Visit Now</a>
+  </aside>
+
+  <!-- ================= FLOATING 2-WAY THEME SWITCHER (PASTEL vs GLASS) ================= -->
+  <div class="floating-theme-switch" id="themeSwitchPill">
+    <span class="theme-switch-title">
+      <span>🎨 Switch Style:</span>
+    </span>
+    <button class="switch-btn active" data-theme-set="pastel" title="Playful Pastel Bento with Calm Lavender/Purple">
+      <span>🌸 Pastel Playground</span>
+    </button>
+    <button class="switch-btn" data-theme-set="glass" title="Modern Frosted Glassmorphism with Glowing Soft Orbs">
+      <span>✨ Frosted Glass</span>
+    </button>
+  </div>
+
+  <main>
+    <!-- ================= HERO SECTION ================= -->
+    <section class="hero" id="about">
+      <div class="container">
+        <div class="hero-grid">
+          <div>
+            <div class="kiddy-badge">
+              <span>🎒</span>
+              <span>Trichy's Brand New Montessori Haven (Est. 2026) for Little Explorers</span>
+            </div>
+            <h1 class="hero-title">
+              We Don't Push Study Stuff! We Teach <span class="highlight-splash">Polite Manners</span>, Good Habits & Happy Minds.
+            </h1>
+            <p class="hero-desc">
+              At <strong>Little Panda</strong>, children don't memorize boring books. We nurture little children in Japanese style habits, polite morning bows, tidy self-care, along with rich <strong>Tamil cultural roots</strong> and <strong>modern Western activities</strong>. Plus, loving day care where every child feels cherished!
+            </p>
+            <div class="hero-btn-group">
+              <a href="#admissions" class="btn btn-primary">
+                <span>Book a Campus Tour</span>
+                <span>👉</span>
+              </a>
+              <a href="#programs" class="btn btn-glass">
+                <span>See Our Fun Programs</span>
+              </a>
+            </div>
+
+            <div class="hero-trust-badges">
+              <div class="trust-badge-pill">
+                <span>🙇</span>
+                <span>Japanese-Style Manners</span>
+              </div>
+              <div class="trust-badge-pill">
+                <span>🌾</span>
+                <span>Tamil & Western Blend</span>
+              </div>
+              <div class="trust-badge-pill">
+                <span>📹</span>
+                <span>24/7 CCTV Monitored</span>
+              </div>
+              <div class="trust-badge-pill">
+                <span>❄️</span>
+                <span>Full AC Classrooms</span>
+              </div>
+              <div class="trust-badge-pill">
+                <span>🧸</span>
+                <span>Day Care (Enrolled Kids Only)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Media Card with Frosted Glass Border and Inner White Card -->
+          <div class="reference-glass-card">
+            <div class="inner-white-card">
+              <img src="assets/images/hero-banner.jpg" alt="Little Panda Montessori Classroom with Happy Children">
+            </div>
+
+            <div class="floating-panda-badge badge-top">
+              <img src="assets/images/panda-mascot.jpg" alt="Panda San" style="width:44px; height:44px; border-radius:50%; border:2px solid var(--primary);">
+              <div>
+                <strong style="display:block; font-family:'Fredoka', cursive; font-size:0.95rem; color:var(--text-title);">Happy Little Pandas!</strong>
+                <span style="font-size:0.8rem; color:var(--text-body);">Cherishing little minds</span>
+              </div>
+            </div>
+
+            <div class="floating-panda-badge badge-bottom">
+              <div>
+                <strong style="display:block; font-family:'Fredoka', cursive; font-size:1rem; color:var(--primary);">Opened in 2026!</strong>
+                <span style="font-size:0.8rem; color:var(--text-body);">First in Trichy for Early Years</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= JAPANESE STYLE MANNERS & MULTI-CULTURAL HARMONY ================= -->
+    <section class="section-padding" id="japanese-ethos">
+      <div class="container">
+        <div class="section-header">
+          <div class="kiddy-badge">
+            <span>⛩️</span>
+            <span>Our Unique Teaching Style</span>
+          </div>
+          <h2 class="section-title">Japanese Style Discipline, Tamil Warmth & Western Fun</h2>
+          <p class="section-desc">
+            We teach in gentle <strong>Japanese style</strong> routines for character and respect, blended harmoniously with our sweet <strong>Tamil language & heritage</strong> and expressive <strong>Western creative arts</strong>!
+          </p>
+        </div>
+
+        <div class="japanese-hero-card">
+          <div class="reference-glass-card" style="padding:0.75rem;">
+            <div class="inner-white-card" style="height:350px;">
+              <img src="assets/images/japanese-habits.jpg" alt="Children greeting with a polite bow and arranging shoes" style="height:100%;">
+            </div>
+          </div>
+
+          <div>
+            <span class="program-pill">Daily Life Rituals</span>
+            <h3 style="font-size:2rem; margin-bottom:1rem;">Daily Habits That Build Loving, Disciplined Kids</h3>
+            <p style="margin-bottom:1.5rem; font-size:1.05rem;">
+              Japanese style early education focuses on <em>Kokoro</em> (heart, character, and empathy) before textbooks. At Little Panda, children practice these joyful habits:
+            </p>
+
+            <div style="display:flex; flex-direction:column; gap:1rem;">
+              <div style="display:flex; align-items:flex-start; gap:0.75rem;">
+                <span style="font-size:1.5rem;">🙇</span>
+                <div>
+                  <strong style="font-size:1.1rem; color:var(--text-title); font-family:'Fredoka', cursive;">Morning Bow & Vanakkam (Aisatsu):</strong>
+                  <p style="margin-top:0.2rem;">Smiling greetings at the door, learning to respect teachers, elders, and peers with polite gestures.</p>
+                </div>
+              </div>
+
+              <div style="display:flex; align-items:flex-start; gap:0.75rem;">
+                <span style="font-size:1.5rem;">👟</span>
+                <div>
+                  <strong style="font-size:1.1rem; color:var(--text-title); font-family:'Fredoka', cursive;">Neat Shoes & Tidy Cubbies (Souji):</strong>
+                  <p style="margin-top:0.2rem;">Placing shoes neatly in wooden cubbies independently, and wiping play mats clean after every activity.</p>
+                </div>
+              </div>
+
+              <div style="display:flex; align-items:flex-start; gap:0.75rem;">
+                <span style="font-size:1.5rem;">🌾</span>
+                <div>
+                  <strong style="font-size:1.1rem; color:var(--text-title); font-family:'Fredoka', cursive;">Tamil Roots & Western Expressions:</strong>
+                  <p style="margin-top:0.2rem;">Sweet Tamil rhymes, moral stories, alongside Western interactive music, storytelling, and rhythm dance.</p>
+                </div>
+              </div>
+
+              <div style="display:flex; align-items:flex-start; gap:0.75rem;">
+                <span style="font-size:1.5rem;">⚙️</span>
+                <div>
+                  <strong style="font-size:1.1rem; color:var(--text-title); font-family:'Fredoka', cursive;">Creative Technical Thinkers:</strong>
+                  <p style="margin-top:0.2rem;">Playing with wooden gears, sorting colors, and exploring cause-and-effect science tubes!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="japanese-habits-grid">
+          <div class="kiddy-card">
+            <div class="card-emoji-bubble">💖</div>
+            <h4 class="kiddy-card-title">Love & Sharing</h4>
+            <p class="kiddy-card-desc">Sharing toys happily, waiting patiently for their turn, and caring for younger friends.</p>
+          </div>
+
+          <div class="kiddy-card">
+            <div class="card-emoji-bubble">🧹</div>
+            <h4 class="kiddy-card-title">Tidy Little Hands</h4>
+            <p class="kiddy-card-desc">Returning wooden Montessori materials to their home shelf after every single game.</p>
+          </div>
+
+          <div class="kiddy-card">
+            <div class="card-emoji-bubble">🧠</div>
+            <h4 class="kiddy-card-title">Curious Thinker</h4>
+            <p class="kiddy-card-desc">Figuring out how shapes match, blocks balance, and colors mix together naturally.</p>
+          </div>
+
+          <div class="kiddy-card">
+            <div class="card-emoji-bubble">🌟</div>
+            <h4 class="kiddy-card-title">Confident Voice</h4>
+            <p class="kiddy-card-desc">Speaking politely with a radiant smile, saying "Thank You" and expressing feelings clearly.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ACADEMIC PROGRAMS & DAY CARE (NO AGE NUMBERS) ================= -->
+    <section class="section-padding" id="programs">
+      <div class="container">
+        <div class="section-header">
+          <div class="kiddy-badge">
+            <span>🌱</span>
+            <span>Little Steps Every Day</span>
+          </div>
+          <h2 class="section-title">Our Fun Learning Stages</h2>
+          <p class="section-desc">
+            No pressure, no cramming! Just joyous discovery, warm smiles, and healthy habits designed for each stage of growth.
+          </p>
+        </div>
+
+        <!-- Program Tab Switchers -->
+        <div class="tabs-switcher-container">
+          <button class="program-tab-btn active" data-tab="tab-prekg">👶 Pre-KG / Toddler</button>
+          <button class="program-tab-btn" data-tab="tab-lkg">🎨 LKG</button>
+          <button class="program-tab-btn" data-tab="tab-ukg">🚀 UKG</button>
+          <button class="program-tab-btn" data-tab="tab-daycare">🏡 Day Care (Enrolled Kids Only)</button>
+        </div>
+
+        <!-- Tab 1: Pre-KG / Toddler -->
+        <div class="program-display-card active" id="tab-prekg">
+          <div>
+            <span class="program-pill">First Steps Into School</span>
+            <h3 class="program-title">Pre-KG / Toddler Play</h3>
+            <p style="font-size:1.15rem; margin-bottom:1.5rem;">
+              Leaving mom and dad for the first time is easy with us! We cuddle away worries, sing sweet rhymes, and let little hands explore soft shapes, wooden blocks, and playful sensory sand.
+            </p>
+            <ul class="program-fun-bullets">
+              <li>
+                <div class="bullet-icon">✓</div>
+                <span>Sensory exploration with safe wooden bells, tactile balls, and colorful mats.</span>
+              </li>
+              <li>
+                <div class="bullet-icon">✓</div>
+                <span>Learning their very first Japanese-style morning greetings and smiling bows.</span>
+              </li>
+              <li>
+                <div class="bullet-icon">✓</div>
+                <span>Warm, gentle caregivers who hold and comfort them whenever they need a hug.</span>
+              </li>
+            </ul>
+            <a href="#admissions" class="btn btn-primary">Enroll in Pre-KG / Toddler</a>
+          </div>
+          <div class="reference-glass-card" style="padding:0.6rem;">
+            <div class="inner-white-card" style="height:340px;">
+              <img src="assets/images/hero-banner.jpg" alt="Toddler Play" style="height:100%;">
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 2: LKG -->
+        <div class="program-display-card" id="tab-lkg">
+          <div>
+            <span class="program-pill">Speaking Up With Wonder</span>
+            <h3 class="program-title">Lower Kindergarten (LKG)</h3>
+            <p style="font-size:1.15rem; margin-bottom:1.5rem;">
+              Little minds love to ask "Why?". We replace rote tracing with lively picture storytelling, funny puppet talk, spoken English games, Tamil folklore, and sorting fun Montessori shapes!
+            </p>
+            <ul class="program-fun-bullets">
+              <li>
+                <div class="bullet-icon">✓</div>
+                <span>Daily show-and-tell so shy voices turn into cheerful, talkative storytellers.</span>
+              </li>
+              <li>
+                <div class="bullet-icon">✓</div>
+                <span>Hands-on wooden Montessori rods, colorful counters, and sound boxes.</span>
+              </li>
+              <li>
+                <div class="bullet-icon">✓</div>
+                <span>Independent habits: hanging their own bag and folding their rest mats.</span>
+              </li>
+            </ul>
+            <a href="#admissions" class="btn btn-primary">Enroll in LKG</a>
+          </div>
+          <div class="reference-glass-card" style="padding:0.6rem;">
+            <div class="inner-white-card" style="height:340px;">
+              <img src="assets/images/stem-creative.jpg" alt="LKG STEM Building" style="height:100%;">
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 3: UKG -->
+        <div class="program-display-card" id="tab-ukg">
+          <div>
+            <span class="program-pill">School Ready & Confident</span>
+            <h3 class="program-title">Upper Kindergarten (UKG)</h3>
+            <p style="font-size:1.15rem; margin-bottom:1.5rem;">
+              Ready to explore the big wide world! We guide children into confident English communication, basic math logic through games, cooperative team projects, and polite discipline.
+            </p>
+            <ul class="program-fun-bullets">
+              <li>
+                <div class="bullet-icon">✓</div>
+                <span>Technical thinking games: matching gear patterns and solving friendly mazes.</span>
+              </li>
+              <li>
+                <div class="bullet-icon">✓</div>
+                <span>Reading readiness through phonics, picture cards, and funny stories.</span>
+              </li>
+              <li>
+                <div class="bullet-icon">✓</div>
+                <span>Smooth, fearless transition into grade school with strong social manners.</span>
+              </li>
+            </ul>
+            <a href="#admissions" class="btn btn-primary">Enroll in UKG</a>
+          </div>
+          <div class="reference-glass-card" style="padding:0.6rem;">
+            <div class="inner-white-card" style="height:340px;">
+              <img src="assets/images/japanese-habits.jpg" alt="UKG Confident Learning" style="height:100%;">
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 4: Day Care (Enrolled Only) -->
+        <div class="program-display-card" id="tab-daycare">
+          <div>
+            <span class="program-pill" style="background:var(--primary-light); color:var(--primary);">Cozy Home Away From Home</span>
+            <h3 class="program-title">Safe & Loving Day Care</h3>
+
+            <div class="daycare-highlight-banner">
+              <span style="font-size:1.6rem;">🔒</span>
+              <div>
+                <strong>Exclusively For Enrolled Little Panda Students:</strong>
+                <div style="font-size:0.9rem; font-weight:500; margin-top:0.2rem;">To keep our environment 100% clean, safe, and familiar, Day Care is only open for children joined in our Pre-KG, LKG, or UKG programs!</div>
+              </div>
+            </div>
+
+            <p style="font-size:1.15rem; margin-bottom:1.5rem;">
+              Working parents can breathe easy! After school finishes, your child enjoys warm naps, healthy fresh snacks, fun picture books, and caring teachers until you pick them up.
+            </p>
+            <ul class="program-fun-bullets">
+              <li>
+                <div class="bullet-icon">✓</div>
+                <span>Cozy snooze zone with soft pillows, clean bedding, and calming lullabies.</span>
+              </li>
+              <li>
+                <div class="bullet-icon">✓</div>
+                <span>Background-verified, loving care aunts who treat every kid like their own.</span>
+              </li>
+              <li>
+                <div class="bullet-icon">✓</div>
+                <span>Flexible extended hours so you never have to rush in traffic from work.</span>
+              </li>
+            </ul>
+            <a href="#admissions" class="btn btn-secondary">Inquire About Day Care</a>
+          </div>
+          <div class="reference-glass-card" style="padding:0.6rem;">
+            <div class="inner-white-card" style="height:340px;">
+              <img src="assets/images/daycare-play.jpg" alt="Day Care Snooze and Story Hour" style="height:100%;">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PREMIUM AMENITIES FOR HOLISTIC GROWTH ================= -->
+    <section class="section-padding" id="amenities">
+      <div class="container">
+        <div class="section-header">
+          <div class="kiddy-badge">
+            <span>🏰</span>
+            <span>Child-Safe Campus</span>
+          </div>
+          <h2 class="section-title">Happy & Safe School Amenities</h2>
+          <p class="section-desc">
+            Everything in our Kalkandarkottai campus is built keeping tiny kids in mind—from rounded wooden edges to sweet air-conditioned rooms.
+          </p>
+        </div>
+
+        <div class="amenities-grid">
+          <div class="kiddy-card">
+            <div class="card-emoji-bubble">🧩</div>
+            <h4 class="kiddy-card-title">Authentic Montessori</h4>
+            <p class="kiddy-card-desc">Child-centered learning where children pick their favorite wooden activities and learn at their own joyful pace.</p>
+          </div>
+
+          <div class="kiddy-card">
+            <div class="card-emoji-bubble">📹</div>
+            <h4 class="kiddy-card-title">24/7 CCTV Cameras</h4>
+            <p class="kiddy-card-desc">Round-the-clock camera monitoring in every play and rest corner, with strictly guarded gates for complete peace of mind.</p>
+          </div>
+
+          <div class="kiddy-card">
+            <div class="card-emoji-bubble">❄️</div>
+            <h4 class="kiddy-card-title">Full AC Classrooms</h4>
+            <p class="kiddy-card-desc">Cool, dust-free, and super comfortable rooms so Trichy's warm weather never tires out our energetic little pandas!</p>
+          </div>
+
+          <div class="kiddy-card">
+            <div class="card-emoji-bubble">📺</div>
+            <h4 class="kiddy-card-title">Smart Ed Screens</h4>
+            <p class="kiddy-card-desc">Smart audio-visual rhymes, animal stories, and nature shows that make learning feel like fun magic.</p>
+          </div>
+
+          <div class="kiddy-card">
+            <div class="card-emoji-bubble">🛝</div>
+            <h4 class="kiddy-card-title">Soft Padded Play Zone</h4>
+            <p class="kiddy-card-desc">Safe slides, ball pits, and soft flooring where little legs run, climb, and giggle without any bumps or bruises.</p>
+          </div>
+
+          <div class="kiddy-card">
+            <div class="card-emoji-bubble">🗣️</div>
+            <h4 class="kiddy-card-title">Spoken English & Tamil</h4>
+            <p class="kiddy-card-desc">Bilingual confidence through daily phonics, Tamil storytelling, songs, and cheerful teacher bonding.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= WHY PARENTS LOVE LITTLE PANDA ================= -->
+    <section class="section-padding" id="benefits">
+      <div class="container">
+        <div class="section-header">
+          <div class="kiddy-badge">
+            <span>💜</span>
+            <span>Why Trichy Loves Us</span>
+          </div>
+          <h2 class="section-title">What Makes Parents Happy?</h2>
+          <p class="section-desc">
+            We know trusting someone with your toddler is the biggest decision. Here is why moms and dads feel relaxed when their child is with us.
+          </p>
+        </div>
+
+        <div class="amenities-grid">
+          <div class="kiddy-card">
+            <div style="font-family:'Fredoka', cursive; font-size:2rem; color:var(--primary); margin-bottom:0.5rem;">01</div>
+            <h4 class="kiddy-card-title">Helping Little Voices Speak Up</h4>
+            <p class="kiddy-card-desc">With patient listening and positive clapping, every shy baby learns to tell what they need with confidence!</p>
+          </div>
+
+          <div class="kiddy-card">
+            <div style="font-family:'Fredoka', cursive; font-size:2rem; color:var(--secondary); margin-bottom:0.5rem;">02</div>
+            <h4 class="kiddy-card-title">Real Hands-On Learning</h4>
+            <p class="kiddy-card-desc">Zero boring worksheets! They touch wooden leaves, measure water volumes, and feel textures directly.</p>
+          </div>
+
+          <div class="kiddy-card">
+            <div style="font-family:'Fredoka', cursive; font-size:2rem; color:var(--accent-yellow); margin-bottom:0.5rem;">03</div>
+            <h4 class="kiddy-card-title">Maternal Second Home</h4>
+            <p class="kiddy-card-desc">Our aunties feed picky eaters with warm love, wipe runny noses, and give comforting hugs when needed.</p>
+          </div>
+
+          <div class="kiddy-card">
+            <div style="font-family:'Fredoka', cursive; font-size:2rem; color:var(--accent-blue); margin-bottom:0.5rem;">04</div>
+            <h4 class="kiddy-card-title">Daily Video Snippets</h4>
+            <p class="kiddy-card-desc">Receive sweet video clips and photos of your child playing, eating, and laughing right on your phone every day.</p>
+          </div>
+
+          <div class="kiddy-card">
+            <div style="font-family:'Fredoka', cursive; font-size:2rem; color:var(--primary); margin-bottom:0.5rem;">05</div>
+            <h4 class="kiddy-card-title">Calm Snooze & Quiet Hours</h4>
+            <p class="kiddy-card-desc">Kids are never forced into overdrive. A planned, peaceful nap time recharges their growing body and mood.</p>
+          </div>
+
+          <div class="kiddy-card">
+            <div style="font-family:'Fredoka', cursive; font-size:2rem; color:var(--secondary); margin-bottom:0.5rem;">06</div>
+            <h4 class="kiddy-card-title">Polite Manners & Good Habits</h4>
+            <p class="kiddy-card-desc">Watching your toddler say "Good morning", place their shoes neatly, and wash hands by themselves brings proud tears to parents' eyes!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PHOTO CORNER / CAMPUS MOMENTS ================= -->
+    <section class="section-padding" id="gallery">
+      <div class="container">
+        <div class="section-header">
+          <div class="kiddy-badge">
+            <span>📷</span>
+            <span>Little Moments</span>
+          </div>
+          <h2 class="section-title">A Day In The Life Of Little Panda</h2>
+          <p class="section-desc">
+            Take a quick peek into our joyful classrooms, cozy daycare, and happy kids at play.
+          </p>
+        </div>
+
+        <div class="gallery-grid">
+          <div class="photo-card">
+            <img src="assets/images/hero-banner.jpg" alt="Montessori Classroom">
+            <div class="photo-overlay">
+              <div class="photo-title">Montessori Activity Hub</div>
+              <div class="photo-desc">Wooden building blocks and happy group play</div>
+            </div>
+          </div>
+
+          <div class="photo-card">
+            <img src="assets/images/japanese-habits.jpg" alt="Japanese Aisatsu Bowing">
+            <div class="photo-overlay">
+              <div class="photo-title">Morning Bow & Neat Cubbies</div>
+              <div class="photo-desc">Polite bowing and taking care of our own shoes</div>
+            </div>
+          </div>
+
+          <div class="photo-card">
+            <img src="assets/images/daycare-play.jpg" alt="Day Care Story Hour">
+            <div class="photo-overlay">
+              <div class="photo-title">Day Care Snooze & Story Time</div>
+              <div class="photo-desc">Warm reading, resting, and cozy cuddles</div>
+            </div>
+          </div>
+
+          <div class="photo-card">
+            <img src="assets/images/stem-creative.jpg" alt="Technical Thinking Blocks">
+            <div class="photo-overlay">
+              <div class="photo-title">Curious Young Inventors</div>
+              <div class="photo-desc">Building gears, color tubes, and logic puzzles</div>
+            </div>
+          </div>
+
+          <div class="photo-card">
+            <img src="assets/images/panda-mascot.jpg" alt="Little Panda San">
+            <div class="photo-overlay">
+              <div class="photo-title">Our Mascot: Panda San!</div>
+              <div class="photo-desc">Bringing smiles and cheer to every morning</div>
+            </div>
+          </div>
+
+          <div class="photo-card">
+            <img src="assets/images/hero-banner.jpg" alt="Air Conditioned Comfort">
+            <div class="photo-overlay">
+              <div class="photo-title">Cool AC Play Area</div>
+              <div class="photo-desc">Safe wooden floors and hygienic clean rooms</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ADMISSION & VISIT FORM ================= -->
+    <section class="section-padding" id="admissions">
+      <div class="container">
+        <div class="admissions-big-card">
+          <div class="admissions-info-col">
+            <div>
+              <span class="kiddy-badge">Admissions 2026 Open</span>
+              <h2 style="font-size:2.4rem; margin-bottom:1rem; line-height:1.2;">Come Visit Our Happy Little World!</h2>
+              <p style="font-size:1.05rem; margin-bottom:1.75rem;">
+                Drop in with your little one to feel the warmth of our teachers, see the Montessori toys, and learn how Japanese style discipline transforms toddler behavior!
+              </p>
+
+              <div style="display:flex; flex-direction:column; gap:1.25rem;">
+                <div style="display:flex; align-items:flex-start; gap:0.75rem;">
+                  <span style="font-size:1.5rem;">📍</span>
+                  <div>
+                    <strong style="font-family:'Fredoka', cursive; font-size:1.1rem; color:var(--text-title);">School Campus Address:</strong>
+                    <p style="margin-top:0.2rem;">No 1, Kavery Nagar Extension, Kalkandarkottai, Trichy - 620011.</p>
+                  </div>
+                </div>
+
+                <div style="display:flex; align-items:flex-start; gap:0.75rem;">
+                  <span style="font-size:1.5rem;">📱</span>
+                  <div>
+                    <strong style="font-family:'Fredoka', cursive; font-size:1.1rem; color:var(--text-title);">Phone & WhatsApp Helplines:</strong>
+                    <p style="margin-top:0.2rem;">
+                      <a href="tel:+919524657960" style="color:var(--primary); font-weight:700;">+91 95246 57960</a> &bull; 
+                      <a href="tel:+917200307127" style="color:var(--primary); font-weight:700;">+91 72003 07127</a>
+                    </p>
+                  </div>
+                </div>
+
+                <div style="display:flex; align-items:flex-start; gap:0.75rem;">
+                  <span style="font-size:1.5rem;">⏰</span>
+                  <div>
+                    <strong style="font-family:'Fredoka', cursive; font-size:1.1rem; color:var(--text-title);">Campus Visiting Hours:</strong>
+                    <p style="margin-top:0.2rem;">Monday to Saturday: 8:30 AM to 5:30 PM</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div style="padding-top:1.5rem; border-top:1px dashed rgba(138, 92, 219, 0.2); margin-top:2rem;">
+              <small style="color:var(--primary); font-weight:700;">🐼 Note: Day Care facility is exclusively available for students enrolled in our school programs.</small>
+            </div>
+          </div>
+
+          <div class="admissions-form-col">
+            <h3 style="font-size:1.75rem; margin-bottom:0.5rem;">Book a Free Campus Tour</h3>
+            <p style="margin-bottom:1.5rem; font-size:0.98rem;">Fill in your details below and our team will connect with you right away on WhatsApp or phone call!</p>
+
+            <form id="kiddyInquiryForm">
+              <div class="kiddy-form-group">
+                <label for="kidParentName" class="form-label">Parent / Guardian Name *</label>
+                <input type="text" id="kidParentName" class="form-input" placeholder="e.g. Priyadharshini" required>
+              </div>
+
+              <div style="display:grid; grid-template-columns:1fr; gap:1rem;">
+                <div class="kiddy-form-group">
+                  <label for="kidPhone" class="form-label">WhatsApp or Phone Number *</label>
+                  <input type="tel" id="kidPhone" class="form-input" placeholder="e.g. 98765 43210" required>
+                </div>
+
+                <div class="kiddy-form-group">
+                  <label for="kidProgram" class="form-label">Interested Program *</label>
+                  <select id="kidProgram" class="form-select" required>
+                    <option value="">Select a Program</option>
+                    <option value="Pre-KG / Toddler Play">Pre-KG / Toddler Play</option>
+                    <option value="LKG">LKG</option>
+                    <option value="UKG">UKG</option>
+                    <option value="School Program + Loving Day Care">School Program + Loving Day Care</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="kiddy-form-group">
+                <label for="kidNote" class="form-label">Questions or Preferred Tour Time</label>
+                <textarea id="kidNote" class="form-textarea" rows="3" placeholder="Tell us when you'd like to visit or ask us anything about your toddler..."></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width:100%; font-size:1.15rem; padding:1rem;">
+                <span>Send Inquiry & Chat on WhatsApp</span>
+                <span>💬</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PARENTS FAQ SECTION ================= -->
+    <section class="section-padding" id="faq">
+      <div class="container">
+        <div class="section-header">
+          <div class="kiddy-badge">
+            <span>❓</span>
+            <span>Got Questions?</span>
+          </div>
+          <h2 class="section-title">Everything Parents Ask Us</h2>
+          <p class="section-desc">
+            Simple answers to the most common questions moms and dads have about Little Panda.
+          </p>
+        </div>
+
+        <div class="faq-box-list">
+          <div class="faq-card-item active">
+            <button class="faq-card-question">
+              <span>Why do you say "We don't teach study stuff"?</span>
+              <div class="faq-arrow">▾</div>
+            </button>
+            <div class="faq-card-answer">
+              Because little kids should never be stressed with boring rote writing or book pressure! Instead, we teach in Japanese style routines—good manners, polite morning bows (Aisatsu), organizing shoes in cubbies, washing hands, speaking confidently in English and Tamil, and solving hands-on wooden puzzles. When children are happy and disciplined, school readiness follows naturally!
+            </div>
+          </div>
+
+          <div class="faq-card-item">
+            <button class="faq-card-question">
+              <span>Do you follow a Japanese curriculum or syllabus?</span>
+              <div class="faq-arrow">▾</div>
+            </button>
+            <div class="faq-card-answer">
+              No, we do not follow a Japanese curriculum. Rather, we teach in Japanese style discipline and habits (cleanliness, courtesy, respect, and independence). Alongside this, our children enjoy our rich Tamil culture and songs, as well as modern Western activity-based learning and English phonics!
+            </div>
+          </div>
+
+          <div class="faq-card-item">
+            <button class="faq-card-question">
+              <span>Can any outside child join only for Day Care?</span>
+              <div class="faq-arrow">▾</div>
+            </button>
+            <div class="faq-card-answer">
+              No. Our Day Care is strictly reserved for children who are enrolled in our Pre-KG, LKG, or UKG school programs. This ensures our daycare rooms stay super hygienic, safe, and filled with familiar friends and teachers your child already knows and loves.
+            </div>
+          </div>
+
+          <div class="faq-card-item">
+            <button class="faq-card-question">
+              <span>Will I receive photos and updates during office hours?</span>
+              <div class="faq-arrow">▾</div>
+            </button>
+            <div class="faq-card-answer">
+              Yes! We share sweet daily video snippets and photo updates directly to parents. You can see your baby laughing, trying puzzles, and enjoying healthy snack time throughout your work day.
+            </div>
+          </div>
+
+          <div class="faq-card-item">
+            <button class="faq-card-question">
+              <span>How safe and clean is your school campus?</span>
+              <div class="faq-arrow">▾</div>
+            </button>
+            <div class="faq-card-answer">
+              Our campus is fully air-conditioned, cleaned and sanitized multiple times a day, monitored by 24/7 CCTV cameras, and watched over by dedicated, background-verified caring staff.
+            </div>
+          </div>
+
+          <div class="faq-card-item">
+            <button class="faq-card-question">
+              <span>Where can we come to visit you in Trichy?</span>
+              <div class="faq-arrow">▾</div>
+            </button>
+            <div class="faq-card-answer">
+              We are located at No 1, Kavery Nagar Extension, Kalkandarkottai, Trichy - 620011. You are warmly welcome to visit us Monday to Saturday from 8:30 AM to 5:30 PM!
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:1rem;">
+            <img src="assets/images/lpims-logo.png" alt="Little Panda Logo" style="height:52px; width:auto;">
+          </div>
+          <p style="margin-bottom:1rem; font-size:0.95rem; line-height:1.5;">
+            Trichy's 1st Japanese-style preschool opened in 2026. Bringing up disciplined mankind, gentle manners, and curious creative thinkers.
+          </p>
+          <div style="font-family:'Fredoka', cursive; font-size:1rem; color:var(--primary); font-weight:700;">
+            "Little step, big possibility"
+          </div>
+        </div>
+
+        <div>
+          <h4 style="font-size:1.2rem; margin-bottom:1rem;">Quick Links</h4>
+          <ul style="list-style:none; display:flex; flex-direction:column; gap:0.6rem; font-weight:600; font-size:0.95rem;">
+            <li><a href="#about">About Our Story</a></li>
+            <li><a href="#japanese-ethos">Japanese Style & Traditions</a></li>
+            <li><a href="#programs">Kids Programs</a></li>
+            <li><a href="#amenities">Campus Fun & Safety</a></li>
+            <li><a href="#admissions">Visit Our Campus</a></li>
+            <li><a href="#faq">Parent Questions</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="font-size:1.2rem; margin-bottom:1rem;">Trichy Campus Location</h4>
+          <p style="font-size:0.95rem; line-height:1.5; margin-bottom:0.75rem;">
+            No 1, Kavery Nagar Extension,<br>
+            Kalkandarkottai, Trichy - 620011.
+          </p>
+          <p style="font-size:0.95rem;">
+            <strong>Admissions Helplines:</strong><br>
+            <a href="tel:+919524657960" style="color:var(--primary); font-weight:700;">+91 95246 57960</a> &bull; 
+            <a href="tel:+917200307127" style="color:var(--primary); font-weight:700;">+91 72003 07127</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2026 Little Panda International Montessori School (LPIMS), Trichy. All Rights Reserved.
+        </div>
+        <div style="color:var(--primary); font-weight:700;">
+          🐼 Little Steps with Big Love!
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= INQUIRY MODAL POPUP ================= -->
+  <div class="modal-overlay" id="inquiryModal">
+    <div class="modal-card">
+      <img src="assets/images/panda-mascot.jpg" alt="Panda Mascot" style="width:85px; height:85px; border-radius:50%; border:3px solid var(--primary); margin:0 auto 1.25rem auto;">
+      <h3 style="font-size:1.6rem; margin-bottom:0.4rem;">Yaaay! We Can't Wait To Meet You!</h3>
+      <p style="font-size:0.98rem; color:var(--text-body); margin-bottom:1.5rem;">
+        Your inquiry details are ready. Click below to chat directly with our Admissions Counselor on WhatsApp!
+      </p>
+      <div style="display:flex; flex-direction:column; gap:0.75rem;">
+        <button id="modalSendWhatsapp" class="btn btn-primary" style="width:100%;">
+          <span>Chat on WhatsApp (+91 95246 57960)</span>
+          <span>💬</span>
+        </button>
+        <button id="modalOk" class="btn btn-glass" style="width:100%;">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= MOBILE BOTTOM QUICK-ACTION BAR (NATIVE THUMB ZONE) ================= -->
+  <nav class="mobile-bottom-bar" aria-label="Mobile Quick Actions">
+    <a href="tel:+919524657960" class="mobile-action-call" title="Call School Now">
+      <span>📞 Call</span>
+    </a>
+    <a href="#admissions" class="mobile-action-visit" title="Book a Campus Visit">
+      <span>✨ Book Tour / WhatsApp</span>
+    </a>
+    <button class="mobile-theme-toggle-btn" id="mobileThemeToggleBtn" title="Toggle Glass / Pastel Style" aria-label="Toggle visual style">
+      <span>🎨</span>
+    </button>
+  </nav>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

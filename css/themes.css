@@ -1,0 +1,133 @@
+/* ==========================================================================
+   THEMES: PASTEL DREAMS vs. FROSTED GLASSMORPHISM
+   Little Panda International Montessori School (LPIMS) - Trichy
+   With Calm Pastel Purple/Lavender Primary (No stressful red)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   THEME 1: PASTEL PLAYGROUND (Default)
+   Soft, peaceful, and settled pastel lavender/purple palette with mint,
+   warm buttercup yellow, and creamy white bento card styling.
+   -------------------------------------------------------------------------- */
+:root,
+[data-theme="pastel"] {
+  --theme-id: "pastel";
+  --bg-page: #FFFFFF;
+  --bg-pattern-opacity: 0.25;
+
+  /* Card and Panel Colors: Crisp solid cards */
+  --card-bg: #FFFFFF;
+  --card-inner-bg: #FFFFFF;
+  --card-border: 2px solid #EFE9F4;
+  --card-shadow: 0 10px 28px rgba(138, 92, 219, 0.08), 0 2px 10px rgba(0, 0, 0, 0.03);
+  --card-hover-shadow: 0 18px 40px rgba(138, 92, 219, 0.16), 0 6px 16px rgba(0, 0, 0, 0.05);
+
+  --glass-bg: rgba(255, 255, 255, 0.94);
+  --glass-border: 1.5px solid rgba(255, 255, 255, 0.98);
+  --glass-backdrop-filter: blur(12px);
+
+  /* Calming, Peaceful Pastel Lavender/Purple */
+  --primary: #8A5CDB;          /* Calm Royal Pastel Purple */
+  --primary-rgb: 138, 92, 219;
+  --primary-hover: #7847CE;
+  --primary-light: #F3EEFF;
+
+  --secondary: #2EC4B6;        /* Fresh Calm Mint */
+  --secondary-rgb: 46, 196, 182;
+  --secondary-light: #E6FAF8;
+
+  --accent-yellow: #FFB703;    /* Warm Honey Gold */
+  --accent-yellow-light: #FFF8E7;
+
+  --accent-blue: #5390D9;      /* Gentle Soft Blue */
+  --accent-blue-light: #EEF5FC;
+
+  --text-title: #2B2438;
+  --text-body: #595268;
+  --text-light: #8A819C;
+  --text-btn: #FFFFFF;
+
+  --badge-bg: #F3EEFF;
+  --badge-color: #7847CE;
+
+  /* Floating Orbs */
+  --floating-orb-1: rgba(162, 126, 237, 0.28);
+  --floating-orb-2: rgba(46, 196, 182, 0.25);
+  --floating-orb-3: rgba(255, 183, 3, 0.28);
+}
+
+/* --------------------------------------------------------------------------
+   THEME 2: TRUE FROSTED GLASSMORPHISM
+   Cards are authentically TRANSLUCENT frosted glass with backdrop blur,
+   frosted borders, semi-transparent inner elements, and vibrant glowing orbs.
+   -------------------------------------------------------------------------- */
+[data-theme="glass"] {
+  --theme-id: "glass";
+  --bg-page: #F4F6FC;
+  --bg-pattern-opacity: 0.32;
+
+  /* TRUE TRANSLUCENT GLASSMORPHISM: Glass cards with see-through frosted backdrop */
+  --card-bg: rgba(255, 255, 255, 0.42);
+  --card-inner-bg: rgba(255, 255, 255, 0.35);
+  --card-border: 1.5px solid rgba(255, 255, 255, 0.65);
+  --card-shadow: 0 16px 40px rgba(124, 77, 255, 0.15), 0 4px 16px rgba(0, 0, 0, 0.05), inset 0 1px 1px rgba(255, 255, 255, 0.8);
+  --card-hover-shadow: 0 24px 55px rgba(124, 77, 255, 0.25), 0 8px 24px rgba(0, 0, 0, 0.08), inset 0 1px 2px rgba(255, 255, 255, 0.9);
+
+  --glass-bg: rgba(255, 255, 255, 0.55);
+  --glass-border: 1.5px solid rgba(255, 255, 255, 0.75);
+  --glass-backdrop-filter: blur(24px) saturate(190%);
+
+  /* Peaceful Electric Lavender & Purple */
+  --primary: #7C4DFF;
+  --primary-rgb: 124, 77, 255;
+  --primary-hover: #651FFF;
+  --primary-light: rgba(124, 77, 255, 0.16);
+
+  --secondary: #00B4D8;
+  --secondary-rgb: 0, 180, 216;
+  --secondary-light: rgba(0, 180, 216, 0.16);
+
+  --accent-yellow: #FFB703;
+  --accent-yellow-light: rgba(255, 183, 3, 0.16);
+
+  --accent-blue: #48CAE4;
+  --accent-blue-light: rgba(72, 202, 228, 0.16);
+
+  --text-title: #1A142A;
+  --text-body: #403A52;
+  --text-light: #706886;
+  --text-btn: #FFFFFF;
+
+  --badge-bg: rgba(124, 77, 255, 0.14);
+  --badge-color: #651FFF;
+
+  /* Ambient Glass Orbs: Vibrant and saturated so they shine through the translucent glass cards */
+  --floating-orb-1: rgba(124, 77, 255, 0.55);
+  --floating-orb-2: rgba(0, 180, 216, 0.45);
+  --floating-orb-3: rgba(255, 183, 3, 0.45);
+}
+
+/* Glass-specific backdrop-filter rule applied directly to all card classes */
+[data-theme="glass"] .kiddy-card,
+[data-theme="glass"] .reference-glass-card,
+[data-theme="glass"] .inner-white-card,
+[data-theme="glass"] .japanese-hero-card,
+[data-theme="glass"] .program-display-card,
+[data-theme="glass"] .admissions-big-card,
+[data-theme="glass"] .admissions-info-col,
+[data-theme="glass"] .faq-card-item,
+[data-theme="glass"] .modal-card,
+[data-theme="glass"] .card-emoji-bubble,
+[data-theme="glass"] .daycare-highlight-banner,
+[data-theme="glass"] .floating-panda-badge,
+[data-theme="glass"] .trust-badge-pill {
+  background: var(--card-bg) !important;
+  backdrop-filter: var(--glass-backdrop-filter) !important;
+  -webkit-backdrop-filter: var(--glass-backdrop-filter) !important;
+  border: var(--card-border) !important;
+  box-shadow: var(--card-shadow) !important;
+}
+
+[data-theme="glass"] .inner-white-card {
+  background: var(--card-inner-bg) !important;
+}

@@ -1,0 +1,1181 @@
+/* ==========================================================================
+   MAIN KIDDY & ATTRACTIVE STYLING
+   Little Panda International Montessori School (LPIMS) - Trichy
+   Clean Navbar with Official Logo, Calm Pastel Purple/Lavender Tones,
+   White + Pastel Paint Marks & Pandas Background, Bouncy Transitions
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Quicksand:wght@500;600;700&display=swap');
+
+/* --- Reset & Global Settings --- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Quicksand', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--bg-page);
+  color: var(--text-body);
+  line-height: 1.65;
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Background Wallpaper: Paint Marks & Playful Pandas */
+.bg-wallpaper {
+  position: fixed;
+  inset: 0;
+  background-image: url('../assets/images/panda-bg-pattern.jpg');
+  background-repeat: repeat;
+  background-size: 520px auto;
+  opacity: var(--bg-pattern-opacity);
+  z-index: -2;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+/* Ambient Glowing Paint Orbs (Calm purple, mint, and honey yellow) */
+.ambient-orb {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(85px);
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.75;
+  animation: orbDrift 16s infinite alternate ease-in-out;
+  transition: background 0.5s ease;
+}
+
+.ambient-orb-1 {
+  width: 520px;
+  height: 520px;
+  top: -120px;
+  right: -80px;
+  background: var(--floating-orb-1);
+}
+
+.ambient-orb-2 {
+  width: 560px;
+  height: 560px;
+  top: 38%;
+  left: -180px;
+  background: var(--floating-orb-2);
+  animation-delay: -6s;
+}
+
+.ambient-orb-3 {
+  width: 480px;
+  height: 480px;
+  bottom: 40px;
+  right: -120px;
+  background: var(--floating-orb-3);
+  animation-delay: -10s;
+}
+
+@keyframes orbDrift {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(35px, 25px) scale(1.08); }
+  100% { transform: translate(-25px, 40px) scale(0.96); }
+}
+
+/* --- Kiddy Headlines & Typography --- */
+h1, h2, h3, h4, .font-heading {
+  font-family: 'Fredoka', cursive, sans-serif;
+  color: var(--text-title);
+  letter-spacing: 0.01em;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+p {
+  font-weight: 500;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+}
+
+/* --- Container & Spacing --- */
+.container {
+  width: 100%;
+  max-width: 1220px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.section-padding {
+  padding-top: 5.5rem;
+  padding-bottom: 5.5rem;
+  position: relative;
+}
+
+/* --- Kiddy Badges & Titles --- */
+.kiddy-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--badge-bg);
+  color: var(--badge-color);
+  padding: 0.45rem 1.15rem;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.88rem;
+  box-shadow: 0 4px 12px rgba(var(--primary-rgb), 0.12);
+  margin-bottom: 1.2rem;
+  animation: gentlePulse 3.5s infinite ease-in-out;
+}
+
+@keyframes gentlePulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+}
+
+.section-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 3.75rem auto;
+}
+
+.section-title {
+  font-size: 2.35rem;
+  margin-bottom: 0.8rem;
+}
+
+@media (min-width: 768px) {
+  .section-title {
+    font-size: 2.95rem;
+  }
+}
+
+.section-desc {
+  font-size: 1.12rem;
+  color: var(--text-body);
+}
+
+/* --- TOP ANNOUNCEMENT NOTICE BAR --- */
+.top-notice-bar {
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(138, 92, 219, 0.1);
+  padding: 0.5rem 1rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-body);
+}
+
+.top-bar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.top-contacts {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.top-contacts a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--primary);
+  font-weight: 700;
+  transition: transform 0.2s;
+}
+
+.top-contacts a:hover {
+  transform: scale(1.05);
+}
+
+/* ==========================================================================
+   NEAT & CLEAN NAVBAR SECTION
+   ========================================================================== */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-backdrop-filter);
+  -webkit-backdrop-filter: var(--glass-backdrop-filter);
+  border-bottom: var(--glass-border);
+  box-shadow: 0 4px 20px rgba(138, 92, 219, 0.05);
+  transition: all 0.35s ease;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 5.2rem;
+  gap: 1.5rem;
+}
+
+.brand-logo-clean {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.brand-official-logo {
+  height: 56px;
+  width: auto;
+  max-width: 280px;
+  object-fit: contain;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.brand-logo-clean:hover .brand-official-logo {
+  transform: scale(1.04);
+}
+
+.nav-menu {
+  display: none;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 0.4rem;
+}
+
+@media (min-width: 1080px) {
+  .nav-menu {
+    display: flex;
+  }
+}
+
+.nav-menu li {
+  display: flex;
+  align-items: center;
+}
+
+.nav-menu a {
+  font-family: 'Fredoka', cursive, sans-serif;
+  font-weight: 600;
+  font-size: 0.96rem;
+  color: var(--text-title);
+  padding: 0.5rem 0.85rem;
+  border-radius: 12px;
+  white-space: nowrap;
+  transition: all 0.25s ease;
+  position: relative;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+  color: var(--primary);
+  background: var(--primary-light);
+}
+
+.nav-action-area {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  flex-shrink: 0;
+}
+
+.mobile-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.9);
+  border: 1px solid rgba(138, 92, 219, 0.15);
+  gap: 5px;
+}
+
+@media (min-width: 1080px) {
+  .mobile-btn {
+    display: none;
+  }
+}
+
+.mobile-btn span {
+  width: 22px;
+  height: 3px;
+  background: var(--text-title);
+  border-radius: 2px;
+}
+
+/* --- Floating 2-Way Theme Switcher Pill (Pastel vs. Glass) --- */
+.floating-theme-switch {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 2px solid rgba(255, 255, 255, 0.95);
+  box-shadow: 0 14px 35px rgba(138, 92, 219, 0.18), 0 2px 10px rgba(0,0,0,0.05);
+  border-radius: 999px;
+  padding: 0.35rem 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.floating-theme-switch:hover {
+  transform: translateX(-50%) translateY(-3px) scale(1.02);
+}
+
+.theme-switch-title {
+  font-family: 'Fredoka', cursive, sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 0 0.6rem;
+  color: var(--text-title);
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.switch-btn {
+  padding: 0.5rem 1.15rem;
+  border-radius: 999px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--text-body);
+  background: transparent;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.switch-btn:hover {
+  color: var(--text-title);
+}
+
+.switch-btn.active {
+  background: var(--primary);
+  color: #FFF;
+  box-shadow: 0 4px 15px rgba(var(--primary-rgb), 0.35);
+  transform: scale(1.05);
+}
+
+/* --- Kiddy Buttons in Peaceful Colors --- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  font-family: 'Fredoka', cursive, sans-serif;
+  font-weight: 600;
+  font-size: 1.05rem;
+  padding: 0.8rem 1.8rem;
+  border-radius: 999px;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  text-align: center;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: #FFF;
+  box-shadow: 0 6px 20px rgba(var(--primary-rgb), 0.3);
+}
+
+.btn-primary:hover {
+  background: var(--primary-hover);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(var(--primary-rgb), 0.4);
+}
+
+.btn-secondary {
+  background: var(--secondary);
+  color: #FFF;
+  box-shadow: 0 6px 20px rgba(var(--secondary-rgb), 0.3);
+}
+
+.btn-secondary:hover {
+  opacity: 0.95;
+  transform: translateY(-3px) scale(1.02);
+}
+
+.btn-glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1.5px solid rgba(255, 255, 255, 0.85);
+  color: var(--text-title);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.btn-glass:hover {
+  background: #FFF;
+  color: var(--primary);
+  transform: translateY(-3px);
+}
+
+/* --- HERO SECTION --- */
+.hero {
+  padding-top: 3.5rem;
+  padding-bottom: 4.5rem;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+@media (min-width: 992px) {
+  .hero-grid {
+    grid-template-columns: 1.15fr 0.95fr;
+  }
+}
+
+.hero-title {
+  font-size: 2.85rem;
+  line-height: 1.18;
+  margin-bottom: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .hero-title {
+    font-size: 3.65rem;
+  }
+}
+
+.highlight-splash {
+  color: var(--primary);
+  position: relative;
+  display: inline-block;
+}
+
+.hero-desc {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-body);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.hero-btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.hero-trust-badges {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.25rem;
+  padding-top: 1.5rem;
+  border-top: 2px dashed rgba(138, 92, 219, 0.15);
+}
+
+.trust-badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--text-title);
+  background: var(--card-bg);
+  backdrop-filter: var(--glass-backdrop-filter);
+  -webkit-backdrop-filter: var(--glass-backdrop-filter);
+  padding: 0.4rem 0.95rem;
+  border-radius: 999px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  border: var(--card-border);
+}
+
+/* Glass Card Outer Frame */
+.reference-glass-card {
+  position: relative;
+  background: var(--card-bg);
+  backdrop-filter: var(--glass-backdrop-filter);
+  -webkit-backdrop-filter: var(--glass-backdrop-filter);
+  border: var(--card-border);
+  border-radius: 36px;
+  padding: 1.25rem;
+  box-shadow: var(--card-shadow);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reference-glass-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--card-hover-shadow);
+}
+
+/* Inner Frame */
+.inner-white-card {
+  background: var(--card-inner-bg);
+  backdrop-filter: var(--glass-backdrop-filter);
+  -webkit-backdrop-filter: var(--glass-backdrop-filter);
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+
+.inner-white-card img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.inner-white-card:hover img {
+  transform: scale(1.04);
+}
+
+/* Floating Bouncy Badges */
+.floating-panda-badge {
+  position: absolute;
+  background: var(--card-bg);
+  backdrop-filter: var(--glass-backdrop-filter);
+  -webkit-backdrop-filter: var(--glass-backdrop-filter);
+  border: var(--card-border);
+  border-radius: 24px;
+  padding: 0.75rem 1.15rem;
+  box-shadow: 0 10px 25px rgba(138, 92, 219, 0.12);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  z-index: 3;
+  animation: floatBounce 4.5s infinite alternate ease-in-out;
+}
+
+.badge-top {
+  top: -15px;
+  right: -10px;
+}
+
+.badge-bottom {
+  bottom: 25px;
+  left: -15px;
+  animation-delay: -2s;
+}
+
+@keyframes floatBounce {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-10px); }
+}
+
+/* --- JAPANESE ETHOS: MANNERS & DISCIPLINE (Plus Tamil & Western) --- */
+.japanese-hero-card {
+  background: var(--card-bg);
+  backdrop-filter: var(--glass-backdrop-filter);
+  -webkit-backdrop-filter: var(--glass-backdrop-filter);
+  border: var(--card-border);
+  border-radius: 36px;
+  padding: 2.5rem;
+  box-shadow: var(--card-shadow);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  align-items: center;
+  margin-bottom: 2.5rem;
+}
+
+@media (min-width: 992px) {
+  .japanese-hero-card {
+    grid-template-columns: 1fr 1.15fr;
+    padding: 3.25rem;
+  }
+}
+
+.japanese-habits-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .japanese-habits-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .japanese-habits-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.kiddy-card {
+  background: var(--card-bg);
+  backdrop-filter: var(--glass-backdrop-filter);
+  -webkit-backdrop-filter: var(--glass-backdrop-filter);
+  border: var(--card-border);
+  border-radius: 28px;
+  padding: 2rem 1.75rem;
+  box-shadow: var(--card-shadow);
+  transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+  position: relative;
+  overflow: visible; /* Allows panda to peek out over top right */
+}
+
+/* Peeking Panda on Card Hover (Top Right Corner) */
+.kiddy-card::after,
+.japanese-hero-card::after,
+.program-display-card::after {
+  content: '';
+  position: absolute;
+  top: -38px;
+  right: 18px;
+  width: 68px;
+  height: 52px;
+  background-image: url('../assets/images/peeking-panda.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  opacity: 0;
+  transform: translateY(22px) scale(0.6) rotate(15deg);
+  transition: opacity 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
+              transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+  pointer-events: none;
+  z-index: 10;
+}
+
+.kiddy-card:hover::after,
+.japanese-hero-card:hover::after,
+.program-display-card:hover::after {
+  opacity: 1;
+  transform: translateY(0px) scale(1) rotate(0deg);
+}
+
+.kiddy-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: var(--card-hover-shadow);
+}
+
+.card-emoji-bubble {
+  width: 62px;
+  height: 62px;
+  border-radius: 22px;
+  background: var(--card-inner-bg);
+  backdrop-filter: var(--glass-backdrop-filter);
+  border: var(--card-border);
+  box-shadow: 0 6px 16px rgba(138, 92, 219, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  margin-bottom: 1.25rem;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.kiddy-card:hover .card-emoji-bubble {
+  transform: rotate(10deg) scale(1.15);
+}
+
+.kiddy-card-title {
+  font-size: 1.35rem;
+  margin-bottom: 0.5rem;
+}
+
+.kiddy-card-desc {
+  font-size: 0.98rem;
+  font-weight: 500;
+  color: var(--text-body);
+}
+
+/* --- PROGRAM TABS & CARDS --- */
+.tabs-switcher-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  margin-bottom: 3rem;
+}
+
+.program-tab-btn {
+  font-family: 'Fredoka', cursive, sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 0.85rem 1.85rem;
+  border-radius: 999px;
+  background: var(--card-bg);
+  backdrop-filter: var(--glass-backdrop-filter);
+  -webkit-backdrop-filter: var(--glass-backdrop-filter);
+  border: var(--card-border);
+  color: var(--text-title);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.program-tab-btn:hover {
+  transform: translateY(-3px);
+  color: var(--primary);
+}
+
+.program-tab-btn.active {
+  background: var(--primary);
+  color: #FFF;
+  border-color: var(--primary);
+  box-shadow: 0 8px 24px rgba(var(--primary-rgb), 0.35);
+  transform: scale(1.05);
+}
+
+.program-display-card {
+  background: var(--card-bg);
+  backdrop-filter: var(--glass-backdrop-filter);
+  -webkit-backdrop-filter: var(--glass-backdrop-filter);
+  border: var(--card-border);
+  border-radius: 36px;
+  padding: 2.5rem;
+  box-shadow: var(--card-shadow);
+  display: none;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  align-items: center;
+  animation: popIn 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.program-display-card.active {
+  display: grid;
+}
+
+@media (min-width: 992px) {
+  .program-display-card {
+    grid-template-columns: 1.15fr 0.95fr;
+    padding: 3.5rem;
+  }
+}
+
+@keyframes popIn {
+  from { opacity: 0; transform: scale(0.96) translateY(12px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.program-pill {
+  display: inline-block;
+  font-family: 'Fredoka', cursive, sans-serif;
+  font-size: 0.9rem;
+  padding: 0.35rem 1rem;
+  border-radius: 999px;
+  background: var(--badge-bg);
+  color: var(--badge-color);
+  margin-bottom: 0.85rem;
+}
+
+.program-title {
+  font-size: 2.3rem;
+  margin-bottom: 1rem;
+}
+
+.program-fun-bullets {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 1.5rem 0 2rem 0;
+}
+
+.program-fun-bullets li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.bullet-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--badge-bg);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.daycare-highlight-banner {
+  background: var(--card-bg);
+  backdrop-filter: var(--glass-backdrop-filter);
+  -webkit-backdrop-filter: var(--glass-backdrop-filter);
+  border-left: 5px solid var(--primary);
+  border-radius: 0 18px 18px 0;
+  padding: 1rem 1.25rem;
+  font-weight: 700;
+  font-size: 0.98rem;
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* --- AMENITIES GRID --- */
+.amenities-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .amenities-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .amenities-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* --- CAMPUS GALLERY & PHOTO CORNER --- */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.photo-card {
+  position: relative;
+  border-radius: 28px;
+  overflow: hidden;
+  height: 290px;
+  box-shadow: var(--card-shadow);
+  border: var(--card-border);
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.photo-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.photo-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: var(--card-hover-shadow);
+}
+
+.photo-card:hover img {
+  transform: scale(1.08);
+}
+
+.photo-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(26, 20, 42, 0.88) 0%, rgba(26, 20, 42, 0.1) 60%, transparent 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.5rem;
+  color: #FFF;
+}
+
+.photo-title {
+  font-family: 'Fredoka', cursive, sans-serif;
+  font-size: 1.25rem;
+  color: #FFF;
+  margin-bottom: 0.2rem;
+}
+
+.photo-desc {
+  font-size: 0.9rem;
+  opacity: 0.95;
+}
+
+/* --- ADMISSIONS & VISIT FORM --- */
+.admissions-big-card {
+  background: var(--card-bg);
+  backdrop-filter: var(--glass-backdrop-filter);
+  -webkit-backdrop-filter: var(--glass-backdrop-filter);
+  border: var(--card-border);
+  border-radius: 36px;
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 992px) {
+  .admissions-big-card {
+    grid-template-columns: 1fr 1.2fr;
+  }
+}
+
+.admissions-info-col {
+  background: var(--card-inner-bg);
+  backdrop-filter: var(--glass-backdrop-filter);
+  -webkit-backdrop-filter: var(--glass-backdrop-filter);
+  padding: 3rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.admissions-form-col {
+  padding: 3rem 2.5rem;
+}
+
+.kiddy-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 1.25rem;
+}
+
+.form-label {
+  font-family: 'Fredoka', cursive, sans-serif;
+  font-size: 1rem;
+  color: var(--text-title);
+}
+
+.form-input, .form-select, .form-textarea {
+  width: 100%;
+  padding: 0.9rem 1.2rem;
+  border-radius: 18px;
+  border: 1.5px solid rgba(138, 92, 219, 0.2);
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--text-title);
+  outline: none;
+  transition: all 0.25s ease;
+}
+
+.form-input:focus, .form-select:focus, .form-textarea:focus {
+  border-color: var(--primary);
+  background: #FFF;
+  box-shadow: 0 0 0 4px rgba(var(--primary-rgb), 0.15);
+}
+
+/* --- FAQ ACCORDION --- */
+.faq-box-list {
+  max-width: 820px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+}
+
+.faq-card-item {
+  background: var(--card-bg);
+  backdrop-filter: var(--glass-backdrop-filter);
+  -webkit-backdrop-filter: var(--glass-backdrop-filter);
+  border: var(--card-border);
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+  transition: all 0.3s ease;
+}
+
+.faq-card-question {
+  width: 100%;
+  padding: 1.35rem 1.75rem;
+  text-align: left;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  font-family: 'Fredoka', cursive, sans-serif;
+  font-size: 1.2rem;
+  color: var(--text-title);
+}
+
+.faq-arrow {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--card-inner-bg);
+  backdrop-filter: var(--glass-backdrop-filter);
+  border: var(--card-border);
+  box-shadow: 0 2px 8px rgba(138, 92, 219, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: var(--primary);
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  flex-shrink: 0;
+}
+
+.faq-card-item.active .faq-arrow {
+  transform: rotate(180deg);
+  background: var(--primary);
+  color: #FFF;
+}
+
+.faq-card-answer {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 1.75rem;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--text-body);
+  transition: max-height 0.35s ease, padding 0.35s ease;
+}
+
+.faq-card-item.active .faq-card-answer {
+  max-height: 280px;
+  padding: 0 1.75rem 1.5rem 1.75rem;
+}
+
+/* --- FOOTER --- */
+.footer {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-backdrop-filter);
+  -webkit-backdrop-filter: var(--glass-backdrop-filter);
+  border-top: var(--glass-border);
+  padding: 4.5rem 0 6rem 0;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1.4fr 1fr 1.2fr;
+  }
+}
+
+.footer-bottom {
+  padding-top: 2rem;
+  border-top: 1px dashed rgba(138, 92, 219, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+/* Mobile Drawer */
+.mobile-nav-drawer {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 80%;
+  max-width: 320px;
+  height: 100vh;
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-left: var(--glass-border);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+  z-index: 1000;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  transition: right 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.mobile-nav-drawer.open {
+  right: 0;
+}
+
+.mobile-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  backdrop-filter: blur(4px);
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+
+.mobile-backdrop.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Modal for Inquiry */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+
+.modal-overlay.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-card {
+  background: var(--card-bg);
+  backdrop-filter: var(--glass-backdrop-filter);
+  -webkit-backdrop-filter: var(--glass-backdrop-filter);
+  border: var(--card-border);
+  border-radius: 32px;
+  padding: 2.5rem;
+  max-width: 460px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+  transform: scale(0.9);
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.modal-overlay.open .modal-card {
+  transform: scale(1);
+}

@@ -1,0 +1,589 @@
+/* ==========================================================================
+   MOBILE-FIRST ARCHITECTURE & CROSS-DEVICE RESPONSIVENESS
+   Little Panda International Montessori School (LPIMS) - Trichy
+   Designed natively for Mobile Phones with thumb-zone touch navigation,
+   frictionless single-tap WhatsApp admissions, and smooth responsive scaling.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. MOBILE CORE (Default Viewport < 768px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 767px) {
+  /* Prevent horizontal micro-scroll */
+  html, body {
+    width: 100%;
+    overflow-x: hidden !important;
+  }
+
+  body {
+    font-size: 15px;
+    padding-bottom: 74px; /* Space for the bottom floating quick-action bar */
+  }
+
+  .container {
+    width: 100%;
+    padding-left: 1.15rem;
+    padding-right: 1.15rem;
+  }
+
+  /* Compact, high-clarity top notice bar */
+  .top-notice-bar {
+    padding: 0.4rem 0.75rem;
+    font-size: 0.78rem;
+    line-height: 1.35;
+  }
+
+  .top-bar-inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.25rem;
+  }
+
+  .top-contacts {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    font-size: 0.8rem;
+  }
+
+  /* Fixed Mobile Header */
+  .navbar {
+    height: 4.4rem;
+  }
+
+  .nav-container {
+    height: 4.4rem;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+  }
+
+  .brand-official-logo {
+    height: 42px;
+    max-width: 195px;
+  }
+
+  .nav-action-area .btn {
+    display: none; /* Replaced by thumb-friendly bottom bar on phones */
+  }
+
+  .mobile-btn {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+  }
+
+  /* Hero Section: Mobile Flow */
+  .hero {
+    padding-top: 1.75rem;
+    padding-bottom: 2.75rem;
+  }
+
+  .hero-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .kiddy-badge {
+    font-size: 0.78rem;
+    padding: 0.35rem 0.85rem;
+    margin-bottom: 0.85rem;
+    line-height: 1.3;
+  }
+
+  .hero-title {
+    font-size: 2.15rem;
+    line-height: 1.22;
+    margin-bottom: 1rem;
+    letter-spacing: -0.01em;
+  }
+
+  .hero-desc {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Big, full-width thumb-friendly CTAs */
+  .hero-btn-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0.75rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .hero-btn-group .btn {
+    width: 100%;
+    font-size: 1.05rem;
+    padding: 0.95rem 1.25rem;
+    border-radius: 999px;
+  }
+
+  /* Clean, Symmetrical 2-Column Trust Badges on Mobile */
+  .hero-trust-badges {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.55rem;
+    width: 100%;
+    padding-top: 1.25rem;
+    border-top: 1.5px dashed rgba(138, 92, 219, 0.2);
+  }
+
+  .trust-badge-pill {
+    width: 100%;
+    justify-content: center;
+    font-size: 0.76rem;
+    font-weight: 700;
+    padding: 0.5rem 0.4rem;
+    text-align: center;
+    border-radius: 14px;
+    box-sizing: border-box;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* Center the 5th trust item cleanly */
+  .hero-trust-badges .trust-badge-pill:last-child {
+    grid-column: 1 / -1;
+    white-space: normal;
+  }
+
+  /* Hero Media Card on Mobile */
+  .reference-glass-card {
+    padding: 0.65rem;
+    border-radius: 28px;
+  }
+
+  .inner-white-card {
+    border-radius: 22px;
+  }
+
+  .inner-white-card img {
+    height: 260px;
+  }
+
+  /* Position floating badges gently on mobile without covering image */
+  .floating-panda-badge {
+    padding: 0.45rem 0.85rem;
+    border-radius: 18px;
+  }
+
+  .badge-top {
+    top: -12px;
+    right: 5px;
+  }
+
+  .badge-top strong {
+    font-size: 0.85rem;
+  }
+
+  .badge-bottom {
+    bottom: 12px;
+    left: 8px;
+  }
+
+  .badge-bottom strong {
+    font-size: 0.88rem;
+  }
+
+  /* Section Spacing & Headers */
+  .section-padding {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+  }
+
+  .section-header {
+    margin-bottom: 2.25rem;
+  }
+
+  .section-title {
+    font-size: 1.95rem;
+    line-height: 1.22;
+    margin-bottom: 0.6rem;
+  }
+
+  .section-desc {
+    font-size: 0.98rem;
+    line-height: 1.55;
+  }
+
+  /* Japanese Ethos Section on Mobile */
+  .japanese-hero-card {
+    padding: 1.5rem 1.25rem;
+    border-radius: 26px;
+    gap: 1.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .japanese-hero-card .inner-white-card {
+    height: 240px;
+  }
+
+  .japanese-habits-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .kiddy-card {
+    padding: 1.5rem 1.25rem;
+    border-radius: 22px;
+  }
+
+  .kiddy-card-title {
+    font-size: 1.22rem;
+  }
+
+  .kiddy-card-desc {
+    font-size: 0.94rem;
+  }
+
+  /* Horizontal Swipeable Program Tabs */
+  .tabs-switcher-container {
+    justify-content: flex-start;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding-bottom: 0.65rem;
+    padding-left: 0.2rem;
+    gap: 0.6rem;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .tabs-switcher-container::-webkit-scrollbar {
+    display: none;
+  }
+
+  .program-tab-btn {
+    flex-shrink: 0;
+    font-size: 0.92rem;
+    padding: 0.65rem 1.2rem;
+    border-radius: 999px;
+  }
+
+  .program-display-card {
+    padding: 1.6rem 1.25rem;
+    border-radius: 26px;
+    gap: 1.75rem;
+  }
+
+  .program-title {
+    font-size: 1.75rem;
+  }
+
+  .program-fun-bullets {
+    gap: 0.75rem;
+    margin: 1.2rem 0 1.5rem 0;
+  }
+
+  .program-fun-bullets li {
+    font-size: 0.96rem;
+  }
+
+  .daycare-highlight-banner {
+    padding: 0.85rem 1rem;
+    font-size: 0.88rem;
+    line-height: 1.45;
+    border-radius: 0 14px 14px 0;
+  }
+
+  .program-display-card .inner-white-card {
+    height: 240px;
+  }
+
+  .program-display-card .btn {
+    width: 100%;
+  }
+
+  /* Amenities Grid on Mobile: 1 column clean cards */
+  .amenities-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  /* Photo Corner Grid on Mobile: 1 card full width with friendly height */
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 1.15rem;
+  }
+
+  .photo-card {
+    height: 240px;
+    border-radius: 22px;
+  }
+
+  /* Admissions Card on Mobile */
+  .admissions-big-card {
+    border-radius: 26px;
+  }
+
+  .admissions-info-col {
+    padding: 1.85rem 1.35rem;
+  }
+
+  .admissions-form-col {
+    padding: 1.85rem 1.35rem;
+  }
+
+  .form-input, .form-select, .form-textarea {
+    font-size: 16px; /* Prevents auto-zoom on iOS Safari */
+    padding: 0.85rem 1.1rem;
+    border-radius: 14px;
+  }
+
+  /* FAQ on Mobile */
+  .faq-card-question {
+    padding: 1.15rem 1.25rem;
+    font-size: 1.08rem;
+  }
+
+  .faq-card-answer {
+    padding: 0 1.25rem 1.25rem 1.25rem;
+    font-size: 0.95rem;
+  }
+
+  .faq-arrow {
+    width: 30px;
+    height: 30px;
+    font-size: 0.85rem;
+  }
+
+  /* Footer on Mobile */
+  .footer {
+    padding-top: 3rem;
+    padding-bottom: 6rem;
+  }
+
+  .footer-grid {
+    gap: 2rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   2. MOBILE BOTTOM QUICK ACTION BAR (Thumb-Friendly Admissions + Style Switch)
+   -------------------------------------------------------------------------- */
+.mobile-bottom-bar {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .mobile-bottom-bar {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 64px;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-top: 1.5px solid rgba(138, 92, 219, 0.18);
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.06);
+    z-index: 1001;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.4rem 1rem;
+    gap: 0.65rem;
+  }
+
+  [data-theme="glass"] .mobile-bottom-bar {
+    background: rgba(255, 255, 255, 0.72);
+    border-top: 1.5px solid rgba(255, 255, 255, 0.8);
+  }
+
+  .mobile-action-call {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    padding: 0.65rem 0.95rem;
+    border-radius: 999px;
+    background: var(--primary-light);
+    color: var(--primary);
+    font-family: 'Fredoka', cursive, sans-serif;
+    font-size: 0.88rem;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  .mobile-action-visit {
+    flex: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.45rem;
+    padding: 0.75rem 1rem;
+    border-radius: 999px;
+    background: var(--primary);
+    color: #FFF;
+    font-family: 'Fredoka', cursive, sans-serif;
+    font-size: 0.98rem;
+    font-weight: 700;
+    box-shadow: 0 4px 14px rgba(var(--primary-rgb), 0.35);
+  }
+
+  .mobile-theme-toggle-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--card-bg);
+    border: 1.5px solid rgba(138, 92, 219, 0.2);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.15rem;
+    flex-shrink: 0;
+  }
+
+  /* Hide the desktop floating pill on mobile in favor of the mobile bottom bar */
+  .floating-theme-switch {
+    display: none !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   3. TABLETS (Portrait & Landscape: 768px - 1079px)
+   -------------------------------------------------------------------------- */
+@media (min-width: 768px) and (max-width: 1079px) {
+  .nav-menu {
+    display: none;
+  }
+
+  .mobile-btn {
+    display: flex;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .hero-trust-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.85rem;
+  }
+
+  .trust-badge-pill {
+    font-size: 0.88rem;
+    padding: 0.45rem 1rem;
+  }
+
+  .inner-white-card img {
+    height: 380px;
+  }
+
+  .japanese-habits-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .amenities-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .admissions-big-card {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   4. LAPTOPS & DESKTOPS (1080px - 1799px)
+   -------------------------------------------------------------------------- */
+@media (min-width: 1080px) {
+  .nav-menu {
+    display: flex;
+  }
+
+  .mobile-btn {
+    display: none;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1.15fr 0.95fr;
+  }
+
+  .hero-trust-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.15rem;
+  }
+
+  .japanese-habits-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .amenities-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .admissions-big-card {
+    grid-template-columns: 1fr 1.2fr;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   5. SMART TVs & 4K SCREENS (>= 1800px)
+   -------------------------------------------------------------------------- */
+@media (min-width: 1800px) {
+  html {
+    font-size: 18px;
+  }
+
+  .container {
+    max-width: 1540px;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+
+  .nav-container {
+    height: 6rem;
+  }
+
+  .brand-official-logo {
+    height: 68px;
+    max-width: 340px;
+  }
+
+  .hero-title {
+    font-size: 4.2rem;
+  }
+
+  .inner-white-card img {
+    height: 480px;
+  }
+}
+
+@media (min-width: 2400px) {
+  html {
+    font-size: 22px;
+  }
+
+  .container {
+    max-width: 1980px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   6. TOUCH ACCESSIBILITY & HOVER TAP RULES
+   -------------------------------------------------------------------------- */
+@media (hover: none) and (pointer: coarse) {
+  /* On touch devices, keep panda visible with tap or gentle bounce */
+  .kiddy-card:active::after,
+  .japanese-hero-card:active::after,
+  .program-display-card:active::after {
+    opacity: 1;
+    transform: translateY(0) scale(1) rotate(0deg);
+  }
+}
