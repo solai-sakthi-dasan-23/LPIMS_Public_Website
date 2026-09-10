@@ -15,12 +15,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
 /* --------------------------------------------------------------------------
    0. FIVE-WAY BACKGROUND WALLPAPER SWITCHER
-   Supports: 'splashes', 'bamboo', 'clouds', 'blocks', 'minimal'
+   Supports: 'splashes', 'sakura', 'bamboo', 'balloons', 'blocks'
    -------------------------------------------------------------------------- */
 function initBackgroundSwitcher() {
   const bgBtns = document.querySelectorAll('.bg-opt-btn');
   const mobileBgBtn = document.getElementById('mobileBgToggleBtn');
-  const bgOptions = ['splashes', 'bamboo', 'clouds', 'blocks', 'minimal'];
+  const bgOptions = ['splashes', 'sakura', 'bamboo', 'balloons', 'blocks'];
   const savedBg = localStorage.getItem('lpims-active-bg') || 'splashes';
 
   applyBackground(savedBg);
@@ -55,7 +55,7 @@ function initBackgroundSwitcher() {
     });
 
     if (mobileBgBtn) {
-      const icons = { splashes: '🎨', bamboo: '🎋', clouds: '☁️', blocks: '🧩', minimal: '🐾' };
+      const icons = { splashes: '🎨', sakura: '🌸', bamboo: '🎋', balloons: '🎈', blocks: '🧩' };
       mobileBgBtn.innerHTML = `<span>${icons[bgName] || '🖼️'}</span>`;
       mobileBgBtn.title = `Current BG: ${bgName} (Tap to cycle)`;
     }

@@ -1,11 +1,11 @@
 /* ==========================================================================
    THEMES & BACKGROUND SELECTOR DEFINITIONS
    Little Panda International Montessori School (LPIMS) - Trichy
-   5 Switchable Background Wallpaper Modes + 2 Aesthetic Card Modes
+   5 Awesome Switchable Background Wallpapers + 2 Aesthetic Card Modes
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   1. FIVE BACKGROUND PATTERNS (Can be switched dynamically)
+   1. FIVE BACKGROUND PATTERNS
    -------------------------------------------------------------------------- */
 :root,
 [data-bg="splashes"] {
@@ -14,28 +14,28 @@
   --bg-pattern-opacity: 0.26;
 }
 
+[data-bg="sakura"] {
+  --bg-pattern-image: url('../assets/images/bg-sakura.jpg');
+  --bg-pattern-size: 560px auto;
+  --bg-pattern-opacity: 0.28;
+}
+
 [data-bg="bamboo"] {
   --bg-pattern-image: url('../assets/images/bg-bamboo.jpg');
   --bg-pattern-size: 560px auto;
   --bg-pattern-opacity: 0.28;
 }
 
-[data-bg="clouds"] {
-  --bg-pattern-image: url('../assets/images/bg-clouds.jpg');
+[data-bg="balloons"] {
+  --bg-pattern-image: url('../assets/images/bg-balloons.jpg');
   --bg-pattern-size: 540px auto;
-  --bg-pattern-opacity: 0.32;
+  --bg-pattern-opacity: 0.27;
 }
 
 [data-bg="blocks"] {
   --bg-pattern-image: url('../assets/images/bg-blocks.jpg');
   --bg-pattern-size: 520px auto;
   --bg-pattern-opacity: 0.24;
-}
-
-[data-bg="minimal"] {
-  --bg-pattern-image: url('../assets/images/bg-minimal.jpg');
-  --bg-pattern-size: 440px auto;
-  --bg-pattern-opacity: 0.45;
 }
 
 /* --------------------------------------------------------------------------
