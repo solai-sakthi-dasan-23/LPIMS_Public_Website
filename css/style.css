@@ -40,18 +40,22 @@ body {
   opacity: var(--bg-pattern-opacity, 0.28);
   z-index: -2;
   pointer-events: none;
-  transition: opacity 0.4s ease, background-image 0.4s ease;
+  transform: translateZ(0);
+  will-change: transform, opacity;
+  transition: opacity 0.3s ease;
 }
 
 /* Ambient Glowing Paint Orbs (Calm purple, mint, and honey yellow) */
 .ambient-orb {
   position: fixed;
   border-radius: 50%;
-  filter: blur(85px);
+  filter: blur(60px);
   z-index: -1;
   pointer-events: none;
-  opacity: 0.75;
-  animation: orbDrift 16s infinite alternate ease-in-out;
+  opacity: 0.65;
+  transform: translateZ(0);
+  will-change: transform;
+  animation: orbDrift 20s infinite alternate ease-in-out;
   transition: background 0.5s ease;
 }
 
