@@ -9,31 +9,31 @@
    -------------------------------------------------------------------------- */
 :root,
 [data-bg="splashes"] {
-  --bg-pattern-image: url('../assets/images/panda-bg-pattern.jpg');
+  --bg-pattern-image: url('../assets/images/panda-bg-pattern.webp');
   --bg-pattern-size: 520px auto;
   --bg-pattern-opacity: 0.26;
 }
 
 [data-bg="sakura"] {
-  --bg-pattern-image: url('../assets/images/bg-sakura.jpg');
+  --bg-pattern-image: url('../assets/images/bg-sakura.webp');
   --bg-pattern-size: 560px auto;
   --bg-pattern-opacity: 0.28;
 }
 
 [data-bg="bamboo"] {
-  --bg-pattern-image: url('../assets/images/bg-bamboo.jpg');
+  --bg-pattern-image: url('../assets/images/bg-bamboo.webp');
   --bg-pattern-size: 560px auto;
   --bg-pattern-opacity: 0.28;
 }
 
 [data-bg="balloons"] {
-  --bg-pattern-image: url('../assets/images/bg-balloons.jpg');
+  --bg-pattern-image: url('../assets/images/bg-balloons.webp');
   --bg-pattern-size: 540px auto;
   --bg-pattern-opacity: 0.27;
 }
 
 [data-bg="blocks"] {
-  --bg-pattern-image: url('../assets/images/bg-blocks.jpg');
+  --bg-pattern-image: url('../assets/images/bg-blocks.webp');
   --bg-pattern-size: 520px auto;
   --bg-pattern-opacity: 0.24;
 }

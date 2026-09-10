@@ -5,8 +5,6 @@
    White + Pastel Paint Marks & Pandas Background, Bouncy Transitions
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Quicksand:wght@500;600;700&display=swap');
-
 /* --- Reset & Global Settings --- */
 *, *::before, *::after {
   box-sizing: border-box;
@@ -716,7 +714,7 @@ button {
   right: 18px;
   width: 68px;
   height: 52px;
-  background-image: url('../assets/images/peeking-panda.png');
+  background-image: url('../assets/images/peeking-panda.webp');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: bottom center;
