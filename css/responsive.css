@@ -450,8 +450,9 @@
     flex-shrink: 0;
   }
 
-  /* Hide the desktop floating pill on mobile in favor of the mobile bottom bar */
-  .floating-theme-switch {
+  /* Hide the desktop floating pill and dock on mobile in favor of the mobile bottom bar */
+  .floating-theme-switch,
+  .floating-bg-dock {
     display: none !important;
   }
 }

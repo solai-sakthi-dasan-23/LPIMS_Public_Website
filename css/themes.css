@@ -99,64 +99,65 @@
    -------------------------------------------------------------------------- */
 [data-theme="glass"] {
   --theme-id: "glass";
-  --bg-page: #EDF1FA;
+  --bg-page: #EEF2FB;
 
-  /* Card and Panel Colors: True Frosted Glass with Deep Translucency */
-  --card-bg: rgba(255, 255, 255, 0.28);
-  --card-inner-bg: rgba(255, 255, 255, 0.20);
-  --card-border: 1.5px solid rgba(255, 255, 255, 0.75);
-  --card-shadow: 0 16px 40px rgba(124, 77, 255, 0.12),
-                 0 4px 16px rgba(0, 0, 0, 0.04),
-                 inset 0 1px 2px rgba(255, 255, 255, 0.85),
-                 inset 0 -1px 2px rgba(124, 77, 255, 0.08);
-  --card-hover-shadow: 0 24px 55px rgba(124, 77, 255, 0.22),
-                       0 8px 24px rgba(0, 0, 0, 0.06),
-                       inset 0 1.5px 3px rgba(255, 255, 255, 0.95),
-                       inset 0 -1px 2px rgba(124, 77, 255, 0.12);
+  /* Card and Panel Colors: Premium Frosted Glass with Specular Highlights & High Legibility */
+  --card-bg: rgba(255, 255, 255, 0.76);
+  --card-inner-bg: rgba(255, 255, 255, 0.60);
+  --card-border: 1.5px solid rgba(255, 255, 255, 0.90);
+  --card-shadow: 0 16px 36px rgba(100, 60, 220, 0.09),
+                 0 4px 12px rgba(0, 0, 0, 0.03),
+                 inset 0 1.5px 2px rgba(255, 255, 255, 0.95),
+                 inset 0 -1.5px 2px rgba(124, 77, 255, 0.06);
+  --card-hover-shadow: 0 22px 50px rgba(100, 60, 220, 0.16),
+                       0 8px 20px rgba(0, 0, 0, 0.05),
+                       inset 0 2px 3px rgba(255, 255, 255, 1),
+                       inset 0 -1.5px 2px rgba(124, 77, 255, 0.10);
 
-  --glass-bg: rgba(255, 255, 255, 0.38);
-  --glass-border: 1.5px solid rgba(255, 255, 255, 0.85);
-  --glass-backdrop-filter: blur(16px) saturate(190%) contrast(105%);
+  --glass-bg: rgba(255, 255, 255, 0.82);
+  --glass-border: 1.5px solid rgba(255, 255, 255, 0.92);
+  --glass-backdrop-filter: blur(24px) saturate(190%) contrast(102%);
 
   /* Peaceful Electric Lavender & Purple */
-  --primary: #7C4DFF;
-  --primary-rgb: 124, 77, 255;
-  --primary-hover: #651FFF;
-  --primary-light: rgba(124, 77, 255, 0.16);
+  --primary: #703BF7;
+  --primary-rgb: 112, 59, 247;
+  --primary-hover: #5B21B6;
+  --primary-light: rgba(112, 59, 247, 0.12);
 
-  --secondary: #00B4D8;
-  --secondary-rgb: 0, 180, 216;
-  --secondary-light: rgba(0, 180, 216, 0.16);
+  --secondary: #00A6C7;
+  --secondary-rgb: 0, 166, 199;
+  --secondary-light: rgba(0, 166, 199, 0.14);
 
-  --accent-yellow: #FFB703;
-  --accent-yellow-light: rgba(255, 183, 3, 0.16);
+  --accent-yellow: #E5A100;
+  --accent-yellow-light: rgba(229, 161, 0, 0.15);
 
-  --accent-blue: #48CAE4;
-  --accent-blue-light: rgba(72, 202, 228, 0.16);
+  --accent-blue: #38BDF8;
+  --accent-blue-light: rgba(56, 189, 248, 0.15);
 
-  --text-title: #1A142A;
-  --text-body: #3C364A;
-  --text-light: #6C647E;
+  /* Deep High-Contrast Typography for Ultra-Clear Readability */
+  --text-title: #0E0720;
+  --text-body: #231C34;
+  --text-light: #524A66;
   --text-btn: #FFFFFF;
 
-  --badge-bg: rgba(124, 77, 255, 0.16);
-  --badge-color: #651FFF;
+  --badge-bg: rgba(112, 59, 247, 0.12);
+  --badge-color: #5B21B6;
 
   /* Ambient Glass Orbs */
-  --floating-orb-1: rgba(124, 77, 255, 0.60);
-  --floating-orb-2: rgba(0, 180, 216, 0.50);
-  --floating-orb-3: rgba(255, 183, 3, 0.50);
+  --floating-orb-1: rgba(112, 59, 247, 0.35);
+  --floating-orb-2: rgba(0, 166, 199, 0.30);
+  --floating-orb-3: rgba(255, 183, 3, 0.30);
 }
 
-/* Intensify Wallpaper in Glass Mode so Translucent Cards Pop Visually */
+/* Calibrated Wallpaper Opacity in Glass Mode: Distinctly visible yet gentle on text */
 [data-theme="glass"] .bg-wallpaper {
-  opacity: 0.48 !important;
+  opacity: 0.28 !important;
 }
 
-/* Keep ambient orbs gentle on desktop */
+/* Keep ambient orbs subtle on desktop */
 [data-theme="glass"] .ambient-orb {
-  opacity: 0.75;
-  filter: blur(75px);
+  opacity: 0.65;
+  filter: blur(85px);
 }
 
 /* Glass-specific backdrop-filter rule applied directly to all card classes */
@@ -186,27 +187,45 @@
 }
 
 [data-theme="glass"] .inner-white-card {
-  background: rgba(255, 255, 255, 0.15) !important;
+  background: rgba(255, 255, 255, 0.45) !important;
+}
+
+[data-theme="glass"] .faq-card-item {
+  background: rgba(255, 255, 255, 0.82) !important;
+  backdrop-filter: blur(28px) saturate(200%) !important;
+  -webkit-backdrop-filter: blur(28px) saturate(200%) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.95) !important;
+  box-shadow: 0 12px 32px rgba(112, 59, 247, 0.08), inset 0 1.5px 2px rgba(255, 255, 255, 1) !important;
+}
+
+[data-theme="glass"] .faq-card-answer {
+  color: #231C34 !important;
+  font-weight: 550 !important;
+}
+
+[data-theme="glass"] .faq-card-question {
+  color: #0E0720 !important;
 }
 
 [data-theme="glass"] .form-input,
 [data-theme="glass"] .form-select,
 [data-theme="glass"] .form-textarea {
-  background: rgba(255, 255, 255, 0.45) !important;
-  border-color: rgba(255, 255, 255, 0.8) !important;
-  backdrop-filter: blur(10px) !important;
-  -webkit-backdrop-filter: blur(10px) !important;
-  box-shadow: inset 0 1px 3px rgba(0,0,0,0.04) !important;
+  background: rgba(255, 255, 255, 0.70) !important;
+  border-color: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.03) !important;
+  color: #0E0720 !important;
 }
 
 [data-theme="glass"] .form-input:focus,
 [data-theme="glass"] .form-select:focus,
 [data-theme="glass"] .form-textarea:focus {
-  background: rgba(255, 255, 255, 0.75) !important;
+  background: rgba(255, 255, 255, 0.92) !important;
   border-color: var(--primary) !important;
 }
 
 [data-theme="glass"] .admissions-info-col {
-  background: rgba(255, 255, 255, 0.22) !important;
-  border-right: 1.5px solid rgba(255, 255, 255, 0.6) !important;
+  background: rgba(255, 255, 255, 0.60) !important;
+  border-right: 1.5px solid rgba(255, 255, 255, 0.8) !important;
 }
