@@ -590,7 +590,7 @@
    6. TOUCH ACCESSIBILITY & PERFORMANCE RULES
    -------------------------------------------------------------------------- */
 @media (hover: none) and (pointer: coarse) {
-  /* On touch mobile devices, lighten backdrop-filter blur for instant 60fps scrolling */
+  /* On touch mobile devices, balance backdrop-filter blur for real glass feel & smooth 60fps */
   [data-theme="glass"] .kiddy-card,
   [data-theme="glass"] .reference-glass-card,
   [data-theme="glass"] .inner-white-card,
@@ -598,14 +598,16 @@
   [data-theme="glass"] .program-display-card,
   [data-theme="glass"] .admissions-big-card,
   [data-theme="glass"] .admissions-info-col,
+  [data-theme="glass"] .admissions-form-col,
   [data-theme="glass"] .faq-card-item,
   [data-theme="glass"] .modal-card,
   [data-theme="glass"] .card-emoji-bubble,
   [data-theme="glass"] .daycare-highlight-banner,
   [data-theme="glass"] .floating-panda-badge,
-  [data-theme="glass"] .trust-badge-pill {
-    backdrop-filter: blur(8px) !important;
-    -webkit-backdrop-filter: blur(8px) !important;
+  [data-theme="glass"] .trust-badge-pill,
+  [data-theme="glass"] .kiddy-daycare-addon-box {
+    backdrop-filter: blur(12px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(12px) saturate(180%) !important;
   }
 
   /* On touch devices, keep panda visible with tap or gentle bounce */

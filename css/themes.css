@@ -91,23 +91,32 @@
 
 /* --------------------------------------------------------------------------
    3. THEME 2: TRUE FROSTED GLASSMORPHISM
-   Cards are authentically TRANSLUCENT frosted glass with backdrop blur,
-   frosted borders, semi-transparent inner elements, and vibrant glowing orbs.
+   Authentic translucent frosted glassmorphism:
+   - High transparency allowing wallpaper and colors to shine through
+   - Refractive frosted blur with dynamic saturation
+   - Crisp white specular edge rim (1px solid rgba(255, 255, 255, 0.75))
+   - Dual-layer inner glass glow and soft ambient drop shadows
    -------------------------------------------------------------------------- */
 [data-theme="glass"] {
   --theme-id: "glass";
-  --bg-page: #F4F6FC;
+  --bg-page: #EDF1FA;
 
-  /* TRUE TRANSLUCENT GLASSMORPHISM: Glass cards with see-through frosted backdrop */
-  --card-bg: rgba(255, 255, 255, 0.42);
-  --card-inner-bg: rgba(255, 255, 255, 0.35);
-  --card-border: 1.5px solid rgba(255, 255, 255, 0.65);
-  --card-shadow: 0 16px 40px rgba(124, 77, 255, 0.15), 0 4px 16px rgba(0, 0, 0, 0.05), inset 0 1px 1px rgba(255, 255, 255, 0.8);
-  --card-hover-shadow: 0 24px 55px rgba(124, 77, 255, 0.25), 0 8px 24px rgba(0, 0, 0, 0.08), inset 0 1px 2px rgba(255, 255, 255, 0.9);
+  /* Card and Panel Colors: True Frosted Glass with Deep Translucency */
+  --card-bg: rgba(255, 255, 255, 0.28);
+  --card-inner-bg: rgba(255, 255, 255, 0.20);
+  --card-border: 1.5px solid rgba(255, 255, 255, 0.75);
+  --card-shadow: 0 16px 40px rgba(124, 77, 255, 0.12),
+                 0 4px 16px rgba(0, 0, 0, 0.04),
+                 inset 0 1px 2px rgba(255, 255, 255, 0.85),
+                 inset 0 -1px 2px rgba(124, 77, 255, 0.08);
+  --card-hover-shadow: 0 24px 55px rgba(124, 77, 255, 0.22),
+                       0 8px 24px rgba(0, 0, 0, 0.06),
+                       inset 0 1.5px 3px rgba(255, 255, 255, 0.95),
+                       inset 0 -1px 2px rgba(124, 77, 255, 0.12);
 
-  --glass-bg: rgba(255, 255, 255, 0.55);
-  --glass-border: 1.5px solid rgba(255, 255, 255, 0.75);
-  --glass-backdrop-filter: blur(24px) saturate(190%);
+  --glass-bg: rgba(255, 255, 255, 0.38);
+  --glass-border: 1.5px solid rgba(255, 255, 255, 0.85);
+  --glass-backdrop-filter: blur(16px) saturate(190%) contrast(105%);
 
   /* Peaceful Electric Lavender & Purple */
   --primary: #7C4DFF;
@@ -126,17 +135,28 @@
   --accent-blue-light: rgba(72, 202, 228, 0.16);
 
   --text-title: #1A142A;
-  --text-body: #403A52;
-  --text-light: #706886;
+  --text-body: #3C364A;
+  --text-light: #6C647E;
   --text-btn: #FFFFFF;
 
-  --badge-bg: rgba(124, 77, 255, 0.14);
+  --badge-bg: rgba(124, 77, 255, 0.16);
   --badge-color: #651FFF;
 
   /* Ambient Glass Orbs */
-  --floating-orb-1: rgba(124, 77, 255, 0.55);
-  --floating-orb-2: rgba(0, 180, 216, 0.45);
-  --floating-orb-3: rgba(255, 183, 3, 0.45);
+  --floating-orb-1: rgba(124, 77, 255, 0.60);
+  --floating-orb-2: rgba(0, 180, 216, 0.50);
+  --floating-orb-3: rgba(255, 183, 3, 0.50);
+}
+
+/* Intensify Wallpaper in Glass Mode so Translucent Cards Pop Visually */
+[data-theme="glass"] .bg-wallpaper {
+  opacity: 0.48 !important;
+}
+
+/* Keep ambient orbs gentle on desktop */
+[data-theme="glass"] .ambient-orb {
+  opacity: 0.75;
+  filter: blur(75px);
 }
 
 /* Glass-specific backdrop-filter rule applied directly to all card classes */
@@ -147,12 +167,17 @@
 [data-theme="glass"] .program-display-card,
 [data-theme="glass"] .admissions-big-card,
 [data-theme="glass"] .admissions-info-col,
+[data-theme="glass"] .admissions-form-col,
 [data-theme="glass"] .faq-card-item,
 [data-theme="glass"] .modal-card,
 [data-theme="glass"] .card-emoji-bubble,
 [data-theme="glass"] .daycare-highlight-banner,
 [data-theme="glass"] .floating-panda-badge,
-[data-theme="glass"] .trust-badge-pill {
+[data-theme="glass"] .trust-badge-pill,
+[data-theme="glass"] .program-tab-btn:not(.active),
+[data-theme="glass"] .floating-theme-switch,
+[data-theme="glass"] .floating-bg-dock,
+[data-theme="glass"] .kiddy-daycare-addon-box {
   background: var(--card-bg) !important;
   backdrop-filter: var(--glass-backdrop-filter) !important;
   -webkit-backdrop-filter: var(--glass-backdrop-filter) !important;
@@ -161,5 +186,27 @@
 }
 
 [data-theme="glass"] .inner-white-card {
-  background: var(--card-inner-bg) !important;
+  background: rgba(255, 255, 255, 0.15) !important;
+}
+
+[data-theme="glass"] .form-input,
+[data-theme="glass"] .form-select,
+[data-theme="glass"] .form-textarea {
+  background: rgba(255, 255, 255, 0.45) !important;
+  border-color: rgba(255, 255, 255, 0.8) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.04) !important;
+}
+
+[data-theme="glass"] .form-input:focus,
+[data-theme="glass"] .form-select:focus,
+[data-theme="glass"] .form-textarea:focus {
+  background: rgba(255, 255, 255, 0.75) !important;
+  border-color: var(--primary) !important;
+}
+
+[data-theme="glass"] .admissions-info-col {
+  background: rgba(255, 255, 255, 0.22) !important;
+  border-right: 1.5px solid rgba(255, 255, 255, 0.6) !important;
 }
