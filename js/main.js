@@ -193,7 +193,50 @@ function initInquiryForm() {
   const modalClose = document.getElementById('modalClose');
   const modalOk = document.getElementById('modalOk');
 
+  const programSelect = document.getElementById('kidProgram');
+  const daycareBox = document.getElementById('daycareAddonBox');
+  const daycareCheck = document.getElementById('kidDaycareCheck');
+  const daycareHint = document.getElementById('daycareAddonHint');
+
   if (!form) return;
+
+  // Listen for program select changes
+  if (programSelect && daycareBox && daycareCheck) {
+    programSelect.addEventListener('change', () => {
+      const selectedProg = programSelect.value;
+      if (selectedProg) {
+        // Enable & highlight Day Care option
+        daycareBox.classList.remove('disabled');
+        daycareBox.classList.add('enabled');
+        daycareCheck.disabled = false;
+        daycareHint.innerHTML = '✨ <strong>Unlocked!</strong> Check this box to include warm naps & after-school care.';
+      } else {
+        // Re-disable Day Care option if no program is picked
+        daycareBox.classList.remove('enabled', 'checked');
+        daycareBox.classList.add('disabled');
+        daycareCheck.disabled = true;
+        daycareCheck.checked = false;
+        daycareHint.innerHTML = '🔒 <em>Select a school program above first to unlock Day Care enrollment.</em>';
+      }
+    });
+
+    // Toggle box active state when checkbox changes
+    daycareCheck.addEventListener('change', () => {
+      if (daycareCheck.checked) {
+        daycareBox.classList.add('checked');
+      } else {
+        daycareBox.classList.remove('checked');
+      }
+    });
+
+    // Make entire box clickable when enabled
+    daycareBox.addEventListener('click', (e) => {
+      if (!daycareCheck.disabled && e.target !== daycareCheck && !e.target.closest('.daycare-custom-check-label')) {
+        daycareCheck.checked = !daycareCheck.checked;
+        daycareCheck.dispatchEvent(new Event('change'));
+      }
+    });
+  }
 
   form.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -201,14 +244,18 @@ function initInquiryForm() {
     const parentName = document.getElementById('kidParentName').value.trim();
     const phone = document.getElementById('kidPhone').value.trim();
     const program = document.getElementById('kidProgram').value;
+    const isDaycareSelected = daycareCheck ? daycareCheck.checked : false;
     const note = document.getElementById('kidNote').value.trim();
 
     const schoolPhone = '919524657960';
+    const programText = isDaycareSelected ? `${program} + 🏡 Loving Day Care` : program;
+
     const message = `*Hello Little Panda School! 🐼*%0A` +
       `Here is our Admission / Campus Tour Inquiry:%0A%0A` +
       `👤 *Parent Name:* ${encodeURIComponent(parentName)}%0A` +
       `📞 *Phone / WhatsApp:* ${encodeURIComponent(phone)}%0A` +
-      `🎒 *Program:* ${encodeURIComponent(program)}%0A` +
+      `🎒 *Program:* ${encodeURIComponent(programText)}%0A` +
+      (isDaycareSelected ? `🏡 *Day Care:* Yes, requested for after-school care%0A` : '') +
       (note ? `💭 *Message:* ${encodeURIComponent(note)}%0A` : '') +
       `📍 *Campus:* Kalkandarkottai, Trichy (Opened 2026)`;
 
@@ -222,11 +269,23 @@ function initInquiryForm() {
           window.open(whatsappUrl, '_blank');
           modal.classList.remove('open');
           form.reset();
+          if (daycareBox) {
+            daycareBox.classList.remove('enabled', 'checked');
+            daycareBox.classList.add('disabled');
+            daycareCheck.disabled = true;
+            daycareHint.innerHTML = '🔒 <em>Select a school program above first to unlock Day Care enrollment.</em>';
+          }
         };
       }
     } else {
       window.open(whatsappUrl, '_blank');
       form.reset();
+      if (daycareBox) {
+        daycareBox.classList.remove('enabled', 'checked');
+        daycareBox.classList.add('disabled');
+        daycareCheck.disabled = true;
+        daycareHint.innerHTML = '🔒 <em>Select a school program above first to unlock Day Care enrollment.</em>';
+      }
     }
   });
 
